@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e7f70109e1fb8c944bfd50d2510c135c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ImpromptuSquad
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c0697cfc3ce7a684e81d2ef40ce0f503, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

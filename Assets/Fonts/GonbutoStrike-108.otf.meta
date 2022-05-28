@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 08154853f2b031949a45e4356ea17b3b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - GonbutoStrike
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 175c473b1a6b50347b6869c961ff01f3, type: 3}
+  - {fileID: 12800000, guid: adfa3933d1ae51845b76a26cb990f1a4, type: 3}
+  - {fileID: 12800000, guid: a1fbed0788d96e943ba34f4c0dc04f4e, type: 3}
+  - {fileID: 12800000, guid: 7d5da9713dfbe184aae7c78094ef76f6, type: 3}
+  - {fileID: 12800000, guid: b77fcd80c495c384b92a4e7533dcacf2, type: 3}
+  - {fileID: 12800000, guid: e08ffa98f45c8b246bc21f885a2a77ef, type: 3}
+  - {fileID: 12800000, guid: 7c142cc1fdbf23140aa960a0e5299891, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

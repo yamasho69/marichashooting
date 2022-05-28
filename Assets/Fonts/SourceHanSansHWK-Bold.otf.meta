@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ffc59e376d4b32d449c54c07f8d3a764
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Source Han Sans HW K
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d5c146a2cda95754ca141419f3bfadaf, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

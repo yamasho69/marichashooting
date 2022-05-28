@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 788122793d7e29644980ac0d8511b2f1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Gen Jyuu Gothic L Monospace
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f5d3718a7268c2d499dbc9dffd8da032, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

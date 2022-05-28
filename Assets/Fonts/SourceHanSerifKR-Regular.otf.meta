@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: d596cee6c7fabb244b91796155abf715
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Source Han Serif KR
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 72325e9534ee9074e9f9d1f836591d86, type: 3}
+  - {fileID: 12800000, guid: 44cd7fc6a6a9e0543b80ada387296483, type: 3}
+  - {fileID: 12800000, guid: 9040e6255453a4346ac50ede6cee7a7d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

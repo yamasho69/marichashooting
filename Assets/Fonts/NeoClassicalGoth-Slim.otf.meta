@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 1cc6379cacc7e7f4596edf01c11b41d3
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - NeoClassicalGoth
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c40789e3c6c7da84198d0b59a174a4f0, type: 3}
+  - {fileID: 12800000, guid: 128adbb1df1ae8e498aea024e01ce023, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

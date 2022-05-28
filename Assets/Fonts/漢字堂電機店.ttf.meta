@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bffd1845a0db50f4b953eaa125b19cf8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - sharp-logo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 06a1cf0155ce0f0429218b83033245d5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,31 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+//using DG.Tweening;
+
+public class EnemyFireMissile : MonoBehaviour {
+    public GameObject enemyMissilePrefab;
+    public float speed;
+    private int timeCount = 0;
+
+    void Update() {
+        timeCount += 1;
+
+        if (timeCount % 600 == 0) {
+            // 敵のミサイルを生成する
+            GameObject enemyMissile = Instantiate(enemyMissilePrefab, transform.position, Quaternion.identity);
+
+            Rigidbody2D enemyMissileRb = enemyMissile.GetComponent<Rigidbody2D>();
+            //transform.upは上に向かう、-transform.upは下に向かう
+            //自機狙い弾を実装する場合、-transform.upだと自機と180度違う方角に飛んでいく
+            enemyMissileRb.velocity = transform.up * speed;
+
+            // ３秒後に敵のミサイルを削除する。
+            Destroy(enemyMissile, 2.0f);
+        }
+    }
+}

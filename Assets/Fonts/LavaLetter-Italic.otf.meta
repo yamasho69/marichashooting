@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0502a9fae98d6724389d1c6e21625841
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - LavaLetter
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 32ceee66054866045b5710e3fcc028b4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
