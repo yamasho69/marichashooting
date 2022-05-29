@@ -17,12 +17,13 @@ public class EnemyHealth : MonoBehaviour {
     private ScoreManager sm;
 
     private void Start() {
-        // スライダーの最大値の設定
-        hpSlider.maxValue = enemyHP;
-
-        // スライダーの現在値の設定
-        hpSlider.value = enemyHP;
-
+        // ★改良（HPスライダー）
+        // 動く敵には『HPスライダー』を設置しません。
+        // そのためHPスライダーを設置している場合だけスライダーが動作するように改良します。
+        if (hpSlider) {
+            hpSlider.maxValue = enemyHP;
+            hpSlider.value = enemyHP;
+        }
         // ★★追加（スコア）
         // 「ScoreLabel」オブジェクトについている「ScoreManager」スクリプトにアクセスして取得する（ポイント）
         sm = GameObject.Find("ScoreLabel").GetComponent<ScoreManager>();
@@ -38,23 +39,26 @@ public class EnemyHealth : MonoBehaviour {
             // ミサイルを破壊する
             Destroy(other.gameObject);
 
-            // ★追加
-            // スライダーの現在値
-            hpSlider.value = enemyHP;
+            // ★改良（HPスライダー）
+            if (hpSlider) {
+                hpSlider.value = enemyHP;//スライダーの現在値
+            }
 
             // 敵のHPが０になったら敵オブジェクトを破壊する。
             if (enemyHP == 0) {
                 // 親オブジェクトを破壊する（ポイント；この使い方を覚えよう！）
                 Destroy(transform.root.gameObject);
+                if (sound) {
+                    // 効果音を出す
+                    AudioSource.PlayClipAtPoint(sound, Camera.main.transform.position, 0.1f);
+                }
+                if (effectPrefab) {
+                    // エフェクトを発生させる
+                    GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
 
-                // 効果音を出す
-                AudioSource.PlayClipAtPoint(sound, Camera.main.transform.position,0.1f);
-
-                // エフェクトを発生させる
-                GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
-
-                // 0.5秒後にエフェクトを消す
-                Destroy(effect, 2.0f);
+                    // 0.5秒後にエフェクトを消す
+                    Destroy(effect, 2.0f);
+                }
                 // ★★追加（スコア）
                 // 敵を破壊した瞬間にスコアを加算するメソッドを呼び出す。
                 // 引数には「scoreValue」を入れる。

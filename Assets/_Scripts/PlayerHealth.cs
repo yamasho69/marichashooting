@@ -10,8 +10,7 @@ using System.Linq;
 public class PlayerHealth : MonoBehaviour {
     public GameObject effectPrefab;
     //public AudioClip damageSound;
-    //public AudioClip destroySound;
-    //[Header("やられSE")] public AudioClip[] yarareSE;
+    private AudioClip destroySound;
     // ★改良（最大HP）
     // 「public」を「private」に変更
     // maxHPを設定（HPの最大値は自由に設定）
@@ -38,11 +37,7 @@ public class PlayerHealth : MonoBehaviour {
     private Color _color;
 
     [Header("やられvoice")][SerializeField] AudioClip[] clips;
-    [SerializeField] AudioSource source;
-    void PlayRandom() {
-        source.clip = clips[UnityEngine.Random.Range(0, clips.Length)];
-        source.Play();
-    }
+    //[SerializeField] AudioSource source;
 
     // ★追加
     private void Start() {
@@ -65,7 +60,7 @@ public class PlayerHealth : MonoBehaviour {
         if (other.gameObject.CompareTag("EnemyMissile") && isMuteki == false) {
             playerHP -= 1;
             //AudioSource.PlayClipAtPoint(damageSound, Camera.main.transform.position);
-            PlayRandom();
+
             Destroy(other.gameObject);
 
             // ★追加
@@ -74,9 +69,9 @@ public class PlayerHealth : MonoBehaviour {
 
             if (playerHP == 0) {
                 GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
-                PlayRandom();
+                destroySound = GetRandom(clips);
+                AudioSource.PlayClipAtPoint(destroySound, Camera.main.transform.position);
                 Destroy(effect, 1.0f);
-                //AudioSource.PlayClipAtPoint(destroySound, Camera.main.transform.position);
                 this.gameObject.SetActive(false);
                 // ★（追加）
                 // HPが０になったら破壊された回数を１つ増加させる。
@@ -184,5 +179,9 @@ public class PlayerHealth : MonoBehaviour {
 
             GetComponent<Renderer>().material.color = _color;
         }
+    }
+
+    internal static T GetRandom<T>(params T[] Params) {
+        return Params[UnityEngine.Random.Range(0, Params.Length)];
     }
 }
