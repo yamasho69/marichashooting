@@ -5,10 +5,11 @@ using UnityEngine;
 public class EnemyGene : MonoBehaviour {
     public GameObject enemyPrefab;
     public float speed;
-    [Header("“G‚ğ¶‚İo‚·‰ñ”")]public int spawnCount;
-    [Header("ˆê“x‚É“G‚ğ¶‚İo‚·‰ñ”")]public int oneSpawn;
-    [Header("¶‚İo‚·ŠÔŠu")]public float spawnSpan;
-    [Header("ˆê•Cˆê•C‚ÌŠÔŠu")]public float spawnInterval;
+    [Header("“G‚ğ¶‚İo‚·‰ñ”")] public int spawnCount;
+    [Header("ˆê“x‚É“G‚ğ¶‚İo‚·‰ñ”")] public int oneSpawn;
+    [Header("¶‚İo‚·ŠÔŠu")] public float spawnSpan;
+    [Header("ˆê•Cˆê•C‚ÌŠÔŠu")] public float spawnInterval;
+    [Header("Á‚¦‚é‚Ü‚Å‚Ì•b”")] public float destroyTime;
 
     private void Start() {
         StartCoroutine(GeneEnemy());
@@ -22,7 +23,9 @@ public class EnemyGene : MonoBehaviour {
                 GameObject enemey = Instantiate(enemyPrefab, transform.position, Quaternion.Euler(0, 0, 0));//‰ñ“]‚ğ‚Â‚¯‚È‚¢‚æ‚¤‚É•ÏX
                 Rigidbody2D enemyRb = enemey.GetComponent<Rigidbody2D>();//2D‚É•ÏX
                 enemyRb.velocity = transform.up * speed;//ƒeƒLƒXƒg‚©‚ç•ÏX
-                Destroy(enemey, 5f);
+                if (destroyTime != 0) {//destroyTime‚ª0‚È‚ç‚ÎŠÔ‚Å”j‰ó‚µ‚È‚¢B
+                    Destroy(enemey, destroyTime);
+                }
 
                 // 0.2•b‚²‚Æ‚É“®ì‚ğŒJ‚è•Ô‚·i©—R‚É•ÏX‰Â”\j
                 yield return new WaitForSeconds(spawnInterval);

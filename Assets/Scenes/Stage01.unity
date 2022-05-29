@@ -386,6 +386,70 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &322895228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 322895231}
+  - component: {fileID: 322895230}
+  - component: {fileID: 322895229}
+  m_Layer: 0
+  m_Name: EnemyGene_8move
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &322895229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322895228}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54300b390b36ca6418e7417b6d87f0b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &322895230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322895228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504f951ff3efd20489c08357aee7f1b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 6547563286110818985, guid: 0bdcc95f2b952104d868909f5318283b,
+    type: 3}
+  speed: 0
+  spawnCount: 1
+  oneSpawn: 8
+  spawnSpan: 3
+  spawnInterval: 0.3
+  destroyTime: 0
+--- !u!4 &322895231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322895228}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560055350
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +670,7 @@ MonoBehaviour:
   oneSpawn: 8
   spawnSpan: 3
   spawnInterval: 0.3
+  destroyTime: 0
 --- !u!4 &624990040
 Transform:
   m_ObjectHideFlags: 0
@@ -775,6 +840,7 @@ MonoBehaviour:
   oneSpawn: 8
   spawnSpan: 3
   spawnInterval: 0.3
+  destroyTime: 0
 --- !u!114 &903242924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1520,7 +1586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1591668537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,6 +1618,7 @@ MonoBehaviour:
   oneSpawn: 8
   spawnSpan: 3
   spawnInterval: 0.3
+  destroyTime: 0
 --- !u!4 &1591668539
 Transform:
   m_ObjectHideFlags: 0
