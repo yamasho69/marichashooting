@@ -11,6 +11,10 @@ public class Retry: MonoBehaviour {
     // ★（追加）
     // 先頭に「public」をつけること（ポイント）
     public void OnRestartButtonClicked() {
-        SceneManager.LoadScene("Stage01");
+        SceneManager.LoadScene("Stage1");
+        // ★追加
+        // スコアを０に戻す。
+        // 他スクリプトの中にある「静的変数」の操作方法（ポイント）
+        ScoreManager.score = 0;
     }
 }

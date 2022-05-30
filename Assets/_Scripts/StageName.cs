@@ -15,6 +15,11 @@ public class StageName : MonoBehaviour {
         // ★追加
         // 「Text」コンポーネントにアクセスして取得する。
         stageNameText = this.gameObject.GetComponent<Text>();
+
+
+        // ★追加
+        // 現在のシーンの名前を取得してtextプロパティにセットする（ポイント）
+        stageNameText.text = SceneManager.GetActiveScene().name;
     }
 
     void Update() {

@@ -26,7 +26,8 @@ public class PlayerHealth : MonoBehaviour {
 
     // ★（追加）
     // プレーヤーが破壊された回数のデータを入れる箱
-    private int destroyCount = 0;
+    // ★修正
+    public static int destroyCount = 0;
 
     [Header("この回数破壊されたらゲームオーバー")]public int gameOverDestroyCount;
 
@@ -41,6 +42,10 @@ public class PlayerHealth : MonoBehaviour {
 
     // ★追加
     private void Start() {
+        // ★追加
+        // この１行を追加しないと、残機数データと残機数の表示（アイコン数）がずれてしまう。
+        UpdatePlayerIcons();
+
         // ★改良（最大HP）
         playerHP = maxHP;
         // スライダーの最大値の設定
