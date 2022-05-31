@@ -29,6 +29,9 @@ public class PlayerHealth : MonoBehaviour {
     // ★修正
     public static int destroyCount = 0;
 
+    // ★追加（ショットパワーの全回復）
+    public FireMissile fireMissile;
+
     [Header("この回数破壊されたらゲームオーバー")]public int gameOverDestroyCount;
 
     // ★追加（無敵）
@@ -131,6 +134,9 @@ public class PlayerHealth : MonoBehaviour {
         isMuteki = true;
         StartCoroutine("ColorCoroutine");
         Invoke("MutekiOff", 1.5f);
+
+        // ★追加（ショットパワーの全回復）
+        fireMissile.shotPower = fireMissile.maxPower;
 
     }
 
