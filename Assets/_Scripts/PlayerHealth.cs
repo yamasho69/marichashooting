@@ -14,25 +14,26 @@ public class PlayerHealth : MonoBehaviour {
     // ★改良（最大HP）
     // 「public」を「private」に変更
     // maxHPを設定（HPの最大値は自由に設定）
-    private int playerHP;
-    private int maxHP = 1;
+    //private int playerHP;
+    //private int maxHP = 1;
 
     
     // ★追加
     //public Slider hpSlider;
     // ★（追加）
     // 配列の定義（「複数のデータ」を入れることのできる「仕切り」付きの箱を作る）
-    public GameObject[] playerIcons;
+    //public GameObject[] playerIcons;
 
     // ★（追加）
     // プレーヤーが破壊された回数のデータを入れる箱
     // ★修正
-    public static int destroyCount = 0;
+    //public static int destroyCount = 0;
+    public static int zanki = 3;
 
     // ★追加（ショットパワーの全回復）
     public FireMissile fireMissile;
 
-    [Header("この回数破壊されたらゲームオーバー")]public int gameOverDestroyCount;
+    //[Header("この回数破壊されたらゲームオーバー")]public int gameOverDestroyCount;
 
     // ★追加（無敵）
     public bool isMuteki = false;
@@ -47,10 +48,10 @@ public class PlayerHealth : MonoBehaviour {
     private void Start() {
         // ★追加
         // この１行を追加しないと、残機数データと残機数の表示（アイコン数）がずれてしまう。
-        UpdatePlayerIcons();
+        //UpdatePlayerIcons();
 
         // ★改良（最大HP）
-        playerHP = maxHP;
+        //playerHP = maxHP;
         // スライダーの最大値の設定
         //hpSlider.maxValue = playerHP;
 
@@ -66,7 +67,7 @@ public class PlayerHealth : MonoBehaviour {
         // ★追加（無敵）
         // 条件文の中に「&& isMuteki == false」を追加
         if (other.gameObject.CompareTag("EnemyMissile") && isMuteki == false) {
-            playerHP -= 1;
+            //playerHP -= 1;
             //AudioSource.PlayClipAtPoint(damageSound, Camera.main.transform.position);
 
             Destroy(other.gameObject);
@@ -75,7 +76,7 @@ public class PlayerHealth : MonoBehaviour {
             // スライダーの現在値
             //hpSlider.value = playerHP;
 
-            if (playerHP == 0) {
+            //if (playerHP == 0) {
                 GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
                 destroySound = GetRandom(clips);
                 AudioSource.PlayClipAtPoint(destroySound, Camera.main.transform.position);
@@ -83,15 +84,17 @@ public class PlayerHealth : MonoBehaviour {
                 this.gameObject.SetActive(false);
                 // ★（追加）
                 // HPが０になったら破壊された回数を１つ増加させる。
-                destroyCount += 1;
+                //destroyCount += 1;
+                zanki--;
+                Debug.Log(zanki);
 
                 // ★（追加）
                 // 命令ブロック（メソッド）を呼び出す。
-                UpdatePlayerIcons();
+                //UpdatePlayerIcons();
 
                 // ★★★（追加）
                 // 破壊された回数によって場合分けを行います。
-                if (destroyCount < gameOverDestroyCount) // ここの条件は自分のゲームに合わせましょう！
+                if (zanki >= 0) // ここの条件は自分のゲームに合わせましょう！
                 {
                     // リトライ
                     Invoke("Retry", 1.0f);
@@ -100,9 +103,10 @@ public class PlayerHealth : MonoBehaviour {
                     Invoke("GameOver", 1.0f);
 
                     // destroyCountをリセット
-                    destroyCount = 0;
+                    //destroyCount = 0;
+                    
                 }
-            }
+            //}
         }
     }
     void GameOver() {
@@ -111,7 +115,7 @@ public class PlayerHealth : MonoBehaviour {
 
     // ★（追加）
     // プレーヤーの残機数を表示する命令ブロック（メソッド）
-    void UpdatePlayerIcons() {
+    /*void UpdatePlayerIcons() {
         // for文（繰り返し文）・・・まずは基本形を覚えましょう！
         for (int i = 0; i < playerIcons.Length; i++) {
             if (destroyCount <= i) {
@@ -120,14 +124,14 @@ public class PlayerHealth : MonoBehaviour {
                 playerIcons[i].SetActive(false);
             }
         }
-    }
+    }*/
 
     // ★★（追加）
     // ゲームリトライに関する命令ブロック
     void Retry() {
         this.gameObject.SetActive(true);
         // ★改良（最大HP）
-        playerHP = maxHP;
+        //playerHP = maxHP;
         //hpSlider.value = playerHP;
         // ★追加（無敵）
         // 何秒間無敵状態にするかは自由！
@@ -137,7 +141,6 @@ public class PlayerHealth : MonoBehaviour {
 
         // ★追加（ショットパワーの全回復）
         fireMissile.shotPower = fireMissile.maxPower;
-
     }
 
     // ★追加（無敵）
@@ -152,7 +155,7 @@ public class PlayerHealth : MonoBehaviour {
 
     // ★追加（HP回復アイテム）
     // 「public」を付けること（ポイント）
-    public void AddHP(int amount) {
+    /*public void AddHP(int amount) {
         // 「amount」分だけHPを回復させる
         playerHP += amount;
 
@@ -163,21 +166,26 @@ public class PlayerHealth : MonoBehaviour {
 
         // HPスライダー
         //hpSlider.value = playerHP;
-    }
+    }*/
+
     // ★追加（自機1UPアイテム）
     // 「public」を付けること（ポイント）
     public void Player1UP(int amount) {
         // amount分だけ自機の残機を回復させる。
         // （考え方）破壊された回数（「destroyCount」）をamount分だけ減少させる。
-        destroyCount -= amount;
+        //destroyCount -= amount;
 
+
+        if (zanki < 99) {
+            zanki++;
+        }
         // 最大残機数を超えないようにする（破壊された回数が０未満にならないようにする）
-        if (destroyCount < 0) {
+        /*if (destroyCount < 0) {
             destroyCount = 0;
         }
 
         // 残機数を表示するアイコン
-        UpdatePlayerIcons();
+        UpdatePlayerIcons();*/
     }
 
     IEnumerator ColorCoroutine() {

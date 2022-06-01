@@ -21,7 +21,7 @@ public class CureItem : Item  // 「MonoBehaviour」を「Item」に変更する（これで「
 
             if (ph != null) {
                 // プレーヤーのHPを自分が指定した量だけ回復させる
-                ph.AddHP(reward);
+                //ph.AddHP(reward);
             }
         }
     }
