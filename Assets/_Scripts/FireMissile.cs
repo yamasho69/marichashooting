@@ -25,6 +25,8 @@ public class FireMissile : MonoBehaviour {
     // ★追加（パワー残量の表示）
     public Slider powerSlider;
 
+    public bool buttondown = false;
+
     private void Start() {
         shotPower = maxPower;
 
@@ -41,7 +43,7 @@ public class FireMissile : MonoBehaviour {
         // ★改良（長押し連射）
         // 「GetButtonDown」を「GetButton」に変更する（ポイント）
         // 「GetButton」は「押している間」という意味
-        if (Input.GetButton("Jump")) {
+        if (Input.GetButton("Jump")||buttondown) {
 
             // ★追加（弾切れ発生）
             // ここのロジックをよく復習すること（重要ポイント）
@@ -88,5 +90,13 @@ public class FireMissile : MonoBehaviour {
     public void RandomizeSfx(params AudioClip[] clips) {
         var randomIndex = UnityEngine.Random.Range(0, clips.Length);
         sfxSource.PlayOneShot(clips[randomIndex]);
+    }
+
+    public void ButtonDown() {
+        buttondown = true;
+    }
+
+    public void ButtonUp() {
+        buttondown = false;
     }
 }
