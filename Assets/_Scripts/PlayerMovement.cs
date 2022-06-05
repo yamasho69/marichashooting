@@ -30,9 +30,6 @@ public class PlayerMovement : MonoBehaviour
             joystickOn = false;
         }
 
-        Debug.Log(joyV);
-        Debug.Log(joyH);
-
         // ★改良（下記の２行をコメントアウトする）
         if (!joystickOn) {
             moveH = Input.GetAxis("Horizontal") * moveSpeed;
@@ -46,10 +43,6 @@ public class PlayerMovement : MonoBehaviour
             moveV = joyV * moveSpeed;
         }
 
-        // ★改良（下記の２行を追加する）
-        //float moveH = Input.GetAxis("Mouse X") * moveSpeed;
-        //float moveV = Input.GetAxis("Mouse Y") * moveSpeed;
-
         transform.Translate(moveH,moveV,0);
         // ★追加
         MoveClamp();
@@ -58,7 +51,6 @@ public class PlayerMovement : MonoBehaviour
     // ★追加
     void MoveClamp() {
         pos = transform.position;
-
 
         //Mathf.Clamp(a,b,c) aの値をb以上c以下に制限する。
         pos.x = Mathf.Clamp(pos.x,left, right);
