@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour {
 
     [Header("‚â‚ç‚êvoice")][SerializeField] AudioClip[] clips;
 
+
     private void Update() {
         alpha_Sin = Mathf.Sin(Time.time*30) / 2 + 0.5f;
     }

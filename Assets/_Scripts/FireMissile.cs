@@ -77,7 +77,7 @@ public class FireMissile : MonoBehaviour {
         }
         // ★追加（ショットパワーの回復）
         else {
-            shotPower += 0.5f;
+            shotPower += 0.8f;
 
             if (shotPower > maxPower) {
                 shotPower = maxPower;

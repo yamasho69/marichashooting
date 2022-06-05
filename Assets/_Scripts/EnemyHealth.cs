@@ -16,6 +16,12 @@ public class EnemyHealth : MonoBehaviour {
     public int scoreValue;
     private ScoreManager sm;
 
+    public GameObject image;
+    //最大HP
+    [SerializeField] int maxHP;
+    //現在のHP
+    [SerializeField] float currentHP;
+
     private void Start() {
         // ★改良（HPスライダー）
         // 動く敵には『HPスライダー』を設置しません。
@@ -24,6 +30,10 @@ public class EnemyHealth : MonoBehaviour {
             hpSlider.maxValue = enemyHP;
             hpSlider.value = enemyHP;
         }
+        if (image) {
+            currentHP = maxHP;
+        }
+
         // ★★追加（スコア）
         // 「ScoreLabel」オブジェクトについている「ScoreManager」スクリプトにアクセスして取得する（ポイント）
         sm = GameObject.Find("ScoreLabel").GetComponent<ScoreManager>();
@@ -34,7 +44,12 @@ public class EnemyHealth : MonoBehaviour {
         // もしもぶつかった相手に「Missile」というタグ（Tag）がついていたら、
         if (other.gameObject.CompareTag("Missile")) {
             // 敵のHPを１ずつ減少させる
-            enemyHP -= 1;
+            if (hpSlider) {
+                enemyHP -= 1;
+            }
+            if (image) {
+                currentHP -= 1;
+            }
 
             // ミサイルを破壊する
             Destroy(other.gameObject);
@@ -44,8 +59,12 @@ public class EnemyHealth : MonoBehaviour {
                 hpSlider.value = enemyHP;//スライダーの現在値
             }
 
+            if (image) {
+                HPDown(currentHP, maxHP);
+            }
+
             // 敵のHPが０になったら敵オブジェクトを破壊する。
-            if (enemyHP == 0) {
+            if (currentHP==0||enemyHP==0) {
                 // 親オブジェクトを破壊する（ポイント；この使い方を覚えよう！）
                 Destroy(transform.root.gameObject);
                 if (sound) {
@@ -65,5 +84,10 @@ public class EnemyHealth : MonoBehaviour {
                 sm.AddScore(scoreValue);
             }
         }
+    }
+
+    public void HPDown(float current, int max) {
+        //ImageというコンポーネントのfillAmountを取得して操作する
+        image.GetComponent<Image>().fillAmount = current / max;
     }
 }
