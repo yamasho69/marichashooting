@@ -6,13 +6,14 @@ public class Item : MonoBehaviour
 {
     //public GameObject effectPrefab;
     public AudioClip sound;
+    
 
     // （ポイント）先頭に「public」をつけること。
     public void ItemBase(GameObject target)
     {
         //GameObject effect = Instantiate(effectPrefab, target.transform.position, Quaternion.identity);
         //Destroy(effect, 1.0f);
-        AudioSource.PlayClipAtPoint(sound, transform.position);
+        AudioSource.PlayClipAtPoint(sound, new Vector3(0, 0, -10));
 
         //（ポイント）
         // アイテムは破壊ではなく非アクティブ状態にする。
@@ -20,6 +21,6 @@ public class Item : MonoBehaviour
         this.gameObject.SetActive(false);
 
         // ミサイルを破壊する。
-        Destroy(target.gameObject);
+        //Destroy(target.gameObject);
     }
 }

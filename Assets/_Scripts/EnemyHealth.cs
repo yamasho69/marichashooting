@@ -11,7 +11,7 @@ public class EnemyHealth : MonoBehaviour {
     public GameObject effectPrefab;
     public AudioClip sound;
     public int enemyHP;
-    public Slider hpSlider; //HPSliderを使用する場合、有効にする。
+    public Slider hpSlider;
     // ★★追加（スコア）
     public int scoreValue;
     private ScoreManager sm;

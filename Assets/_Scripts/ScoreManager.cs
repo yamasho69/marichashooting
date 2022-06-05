@@ -7,8 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 //using DG.Tweening;
 
-public class ScoreManager : MonoBehaviour
-{
+public class ScoreManager : MonoBehaviour {
     // ★修正
     // 静的変数（ポイント）
     // public staticをつけることで、このScoreManagerスクリプトがついている他のオブジェクトと
@@ -17,10 +16,7 @@ public class ScoreManager : MonoBehaviour
     private Text scoreLabel;
 
     // ★追加
-    public AudioClip clearSound;
-    public int clearScore;
     public string nextStageName;
-    private bool isClear = false;
 
     void Start() {
         // ★追加
@@ -36,8 +32,10 @@ public class ScoreManager : MonoBehaviour
         // 「amount」に入ってくる数値分を加算していく。
         score += amount;
         scoreLabel.text = "SCORE:" + score;
-
+    } 
+}
         // ★追加
+        /*以下はStageManagerに移した
         if (score > clearScore && !isClear) {
             AudioSource.PlayClipAtPoint(clearSound, Camera.main.transform.position);
             isClear = true;
@@ -49,4 +47,4 @@ public class ScoreManager : MonoBehaviour
     void StageClear() {
         SceneManager.LoadScene(nextStageName);
     }
-}
+}*/
