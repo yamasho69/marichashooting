@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4051654418770565216}
   - component: {fileID: -2298450773132896556}
   m_Layer: 0
-  m_Name: EnemyD
+  m_Name: EnemyD 1
   m_TagString: EnemyMissile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b6a5cd14cef4c714dbb4e01f461e92c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5834c84d95d7e9a43bf3dad5a6a60eb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e757dc130a659449ba0fc0b6cc6b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  stopTime: 180
-  x: 270
-  y: 180
+  speed: 6
+  stopTime: 230
+  x: -150
+  y: -150

@@ -13,6 +13,8 @@ public class ScoreManager : MonoBehaviour {
     // public staticをつけることで、このScoreManagerスクリプトがついている他のオブジェクトと
     // scoreのデータを共有することができるようになります。
     public static int score = 0;
+    public static int oneUPscore = 500;
+    public GameObject oneUPItem;
     private Text scoreLabel;
 
     // ★追加
@@ -32,6 +34,11 @@ public class ScoreManager : MonoBehaviour {
         // 「amount」に入ってくる数値分を加算していく。
         score += amount;
         scoreLabel.text = "SCORE:" + score;
+
+        if (score > oneUPscore) {
+            oneUPItem.SetActive(true);
+            oneUPscore += 500;
+        }
     } 
 }
         // ★追加

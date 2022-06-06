@@ -13,6 +13,17 @@ public class Stage01Manager : MonoBehaviour {
     private bool isClear = false;
     private bool bossDestroy = false;
 
+    public GameObject enemy1;
+    public GameObject enemy2;
+    public GameObject enemy3;
+    public GameObject enemy4;
+    public GameObject enemy5;
+    public GameObject enemy6;
+    public GameObject enemy7;
+    public GameObject enemy8;
+    public GameObject boss;
+    public GameObject stageClear;
+
     void Start()
     {
         StartCoroutine("StageStart"); 
@@ -22,6 +33,7 @@ public class Stage01Manager : MonoBehaviour {
         if (bossDestroy && !isClear) {
             AudioSource.PlayClipAtPoint(clearSound, Camera.main.transform.position);
             isClear = true;
+            Invoke("StageClearText", 2.0f);
             Invoke("StageClear", 4.5f);
         }
     }
@@ -37,5 +49,9 @@ public class Stage01Manager : MonoBehaviour {
 
     void StageClear() {
         SceneManager.LoadScene(nextStageName);
+    }
+
+    void StageClearText() {
+        stageClear.SetActive(true);
     }
 }

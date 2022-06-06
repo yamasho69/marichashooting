@@ -16,6 +16,7 @@ public class Retry: MonoBehaviour {
         // スコアを０に戻す。
         // 他スクリプトの中にある「静的変数」の操作方法（ポイント）
         ScoreManager.score = 0;
+        ScoreManager.oneUPscore = 500;
         PlayerHealth.zanki = 3;
     }
 }
