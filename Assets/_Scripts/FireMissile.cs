@@ -77,13 +77,15 @@ public class FireMissile : MonoBehaviour {
         }
         // ★追加（ショットパワーの回復）
         else {
-            shotPower += 0.8f;
+            if (Time.timeScale == 1) {//これがないとポーズ中にショットパワーが回復する
+                shotPower += 0.8f;
 
-            if (shotPower > maxPower) {
-                shotPower = maxPower;
+                if (shotPower > maxPower) {
+                    shotPower = maxPower;
+                }
+
+                powerSlider.value = shotPower;
             }
-
-            powerSlider.value = shotPower;
         }
     }
 
