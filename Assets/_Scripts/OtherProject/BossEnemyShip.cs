@@ -14,7 +14,7 @@ public class BossEnemyShip : MonoBehaviour
 
     void Start() {
         StartCoroutine(CPU());
-        player = GameObject.Find("PlayerShip");
+        player = GameObject.Find("Player");
     }
 
     void ShotN(int count,float speed)
