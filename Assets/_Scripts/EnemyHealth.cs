@@ -18,9 +18,9 @@ public class EnemyHealth : MonoBehaviour {
 
     public GameObject image;
     //最大HP
-    [SerializeField] int maxHP;
+    public float maxHP;
     //現在のHP
-    [SerializeField] float currentHP;
+    public float currentHP;
 
     private void Start() {
         // ★改良（HPスライダー）
@@ -66,7 +66,9 @@ public class EnemyHealth : MonoBehaviour {
             // 敵のHPが０になったら敵オブジェクトを破壊する。
             if (currentHP==0||enemyHP==0) {
                 // 親オブジェクトを破壊する（ポイント；この使い方を覚えよう！）
-                Destroy(transform.root.gameObject);
+                //Destroy(transform.root.gameObject);
+                //親オブジェクトを破壊するのはキケン
+                Destroy(this.gameObject);
                 if (sound) {
                     // 効果音を出す
                     AudioSource.PlayClipAtPoint(sound, Camera.main.transform.position, 0.1f);
@@ -86,7 +88,7 @@ public class EnemyHealth : MonoBehaviour {
         }
     }
 
-    public void HPDown(float current, int max) {
+    public void HPDown(float current, float max) {
         //ImageというコンポーネントのfillAmountを取得して操作する
         image.GetComponent<Image>().fillAmount = current / max;
     }

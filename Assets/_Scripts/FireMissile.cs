@@ -72,7 +72,7 @@ public class FireMissile : MonoBehaviour {
                 RandomizeSfx(onaraSE);
 
                 // 発射したミサイルを２秒後に破壊（削除）する。
-                Destroy(missile, 2.0f);
+                Destroy(missile, 0.6f);
             }
         }
         // ★追加（ショットパワーの回復）

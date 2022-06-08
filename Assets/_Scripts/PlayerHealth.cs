@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour {
         // ★追加（無敵）
         // 条件文の中に「&& isMuteki == false」を追加
         if (other.gameObject.CompareTag("EnemyMissile") && isMuteki == false) {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
             destroySound = GetRandom(clips);
             AudioSource.PlayClipAtPoint(destroySound, Camera.main.transform.position);

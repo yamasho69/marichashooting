@@ -11,7 +11,6 @@ public class Stage01Manager : MonoBehaviour {
     public AudioClip clearSound;
     public string nextStageName;
     private bool isClear = false;
-    private bool bossDestroy = false;
 
     public GameObject enemy1;
     public GameObject enemy2;
@@ -21,6 +20,7 @@ public class Stage01Manager : MonoBehaviour {
     public GameObject enemy6;
     public GameObject enemy7;
     public GameObject enemy8;
+    public GameObject enemy9;
     public GameObject boss;
     public GameObject stageClear;
 
@@ -30,20 +30,42 @@ public class Stage01Manager : MonoBehaviour {
     }
 
     private void Update() {
-        if (bossDestroy && !isClear) {
+        if (enemy9 == null) {
+            Invoke("BossActive", 3.0f);
+        }
+
+
+        if (boss==null && !isClear) {
             AudioSource.PlayClipAtPoint(clearSound, Camera.main.transform.position);
             isClear = true;
             Invoke("StageClearText", 2.0f);
-            Invoke("StageClear", 4.5f);
+            Invoke("StageClear", 5.0f);
         }
     }
 
     IEnumerator StageStart() {
         //‚±‚±‚Éˆ—‚ğ‘‚­
-
+        yield return new WaitForSeconds(3f);
+        enemy1.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        enemy2.SetActive(true);
+        yield return new WaitForSeconds(20f);
+        enemy3.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        enemy4.SetActive(true);
+        yield return new WaitForSeconds(20f);
+        enemy5.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        enemy6.SetActive(true);
+        yield return new WaitForSeconds(20f);
+        enemy7.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        enemy8.SetActive(true);
+        yield return new WaitForSeconds(10f);
+        enemy9.SetActive(true);
+        yield return new WaitForSeconds(14f);
         //1ƒtƒŒ[ƒ€’â~
         yield return null;
-
         //‚±‚±‚ÉÄŠJŒã‚Ìˆ—‚ğ‘‚­
     }
 
@@ -53,5 +75,9 @@ public class Stage01Manager : MonoBehaviour {
 
     void StageClearText() {
         stageClear.SetActive(true);
+    }
+
+    void BossActive() {
+        boss.SetActive(true);
     }
 }
