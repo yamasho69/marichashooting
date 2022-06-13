@@ -45,34 +45,36 @@ public class FireMissile : MonoBehaviour {
         // 「GetButton」は「押している間」という意味
         if (Input.GetButton("Jump")||buttondown) {
 
-            // ★追加（弾切れ発生）
-            // ここのロジックをよく復習すること（重要ポイント）
-            if (shotPower <= 0) {
-                return;
-            }
+            if (Time.timeScale == 1) {//これがないとポーズ中にショットできる
+                                      // ★追加（弾切れ発生）
+                                      // ここのロジックをよく復習すること（重要ポイント）
+                if (shotPower <= 0) {
+                    return;
+                }
 
-            // ★追加（弾切れ発生）
-            shotPower -= 1;
+                // ★追加（弾切れ発生）
+                shotPower -= 1;
 
-            // ★追加（パワー残量の表示）
-            powerSlider.value = shotPower;
+                // ★追加（パワー残量の表示）
+                powerSlider.value = shotPower;
 
+                // ★改良（長押し連射）
+                // 「5」の部分の数字を変えると「連射の間隔」を変更することができます（ポイント）
+                // 「%」と「==」の意味合いを復習しましょう。
+                if (timeCount % 130 == 0) {
+                    // プレハブからミサイルオブジェクトを作成し、それをmissileという名前の箱に入れる。
+                    GameObject missile = Instantiate(missilePrefab, transform.position, Quaternion.identity);
 
-            // ★改良（長押し連射）
-            // 「5」の部分の数字を変えると「連射の間隔」を変更することができます（ポイント）
-            // 「%」と「==」の意味合いを復習しましょう。
-            if (timeCount % 130 == 0) {
-                // プレハブからミサイルオブジェクトを作成し、それをmissileという名前の箱に入れる。
-                GameObject missile = Instantiate(missilePrefab, transform.position, Quaternion.identity);
+                    Rigidbody2D rigidbody2D = missile.GetComponent<Rigidbody2D>();
 
-                Rigidbody2D rigidbody2D = missile.GetComponent<Rigidbody2D>();
+                    rigidbody2D.velocity = transform.up * missileSpeed;
 
-                rigidbody2D.velocity = transform.up * missileSpeed;
+                    RandomizeSfx(onaraSE);
 
-                RandomizeSfx(onaraSE);
+                    // 発射したミサイルを２秒後に破壊（削除）する。
+                    Destroy(missile, 0.6f);
 
-                // 発射したミサイルを２秒後に破壊（削除）する。
-                Destroy(missile, 0.6f);
+                }
             }
         }
         // ★追加（ショットパワーの回復）

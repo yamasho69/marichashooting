@@ -1477,7 +1477,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1495,7 +1495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672252139}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.2, z: 0}
+  m_LocalPosition: {x: 0, y: 5.3, z: 0}
   m_LocalScale: {x: 6, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1906,7 +1906,7 @@ PrefabInstance:
     - target: {fileID: 3399581411533632089, guid: e3771813c8d22554daa9d407a54b932d,
         type: 3}
       propertyPath: oneSpawn
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3399581411533632089, guid: e3771813c8d22554daa9d407a54b932d,
         type: 3}
@@ -2325,11 +2325,16 @@ PrefabInstance:
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
       propertyPath: oneSpawn
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
       propertyPath: spawnCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
+        type: 3}
+      propertyPath: destroyTime
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3200,7 +3205,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
+      propertyPath: oneSpawn
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
+        type: 3}
       propertyPath: spawnCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
+        type: 3}
+      propertyPath: destroyTime
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
@@ -3554,11 +3569,16 @@ PrefabInstance:
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
       propertyPath: oneSpawn
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
       propertyPath: spawnCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
+        type: 3}
+      propertyPath: destroyTime
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
