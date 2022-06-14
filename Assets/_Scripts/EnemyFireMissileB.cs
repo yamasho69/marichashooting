@@ -7,6 +7,7 @@ public class EnemyFireMissileB : MonoBehaviour {
     public float speed;
     private int timeCount;
     public Rotate rotate;
+    [Header("‘¬Ë’e‚Ö‚ÌØ‚è‘Ö‚¦")]public bool sokushaOn;
 
     private void Start() {
         Rotate rotate = GetComponent<Rotate>();
@@ -37,7 +38,7 @@ public class EnemyFireMissileB : MonoBehaviour {
         }
 
         //timeCount‚ª2000‚ÅŠ„‚èØ‚ê‚é”‚É‚È‚Á‚½A‘¬Ë’e‚ÉØ‚è‘Ö‚í‚éB
-        if (timeCount % 2000 == 0) {
+        if (timeCount % 2000 == 0&&sokushaOn) {
             rotate.enabled = false;
         }
     }

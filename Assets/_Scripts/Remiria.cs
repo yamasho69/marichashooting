@@ -16,6 +16,9 @@ public class Remiria : MonoBehaviour
     GameObject player;
     public AudioClip uh;
     public EnemyHealth remiriaHealth;
+    public GameObject nWay;//自機狙い弾
+    public GameObject spiral;//スパイラル弾
+
     public enum BulletType {
         Big,
         RedSword,
@@ -65,23 +68,25 @@ public class Remiria : MonoBehaviour
             //レミリアのHPが最大HPの2/3以上の場合
             if (remiriaHealth.currentHP > remiriaHealth.maxHP * 2 / 3) {
                 bulletType = BulletType.Big;
-                yield return WaveNShotM(8, 12);
+                yield return WaveNShotM(8, 16);
                 yield return new WaitForSeconds(1f);
-                bulletType = BulletType.RedSword;
-                yield return WaveNPlayerAimShot(10, 3);
+                bulletType = BulletType.BlueSword;
+                yield return WaveNPlayerAimShot(10, 5);
                 yield return new WaitForSeconds(1.8f);
             //レミリアのHPが最大HPの1/3以上の場合
             } else if (remiriaHealth.currentHP > remiriaHealth.maxHP * 1 / 3) {
-                bulletType = BulletType.Big;
-                yield return WaveNShotM(6, 8);
-                yield return new WaitForSeconds(1f);
-                bulletType = BulletType.BlueSword;
-                yield return WaveNPlayerAimShot(4, 10);
-                yield return new WaitForSeconds(1f);
+                nWay.SetActive(true);
+                spiral.SetActive(false);
+                yield return new WaitForSeconds(1.2f);
+                spiral.SetActive(true);
+                nWay.SetActive(false);
+                yield return new WaitForSeconds(4f);
             } else {
                 bulletType = BulletType.Big;
+                nWay.SetActive(false);
+                spiral.SetActive(false);
                 yield return WaveNPlayerAimShot(6, 7);
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(1.5f);
             }
             //yield return new WaitForSeconds(1.5f);//これが最後に入らない状態でwhileを回すと無限ループになる
         }
@@ -100,7 +105,7 @@ public class Remiria : MonoBehaviour
 
         //n回、m方向に撃つ
         for (int w = 0; w < n; w++) {
-            PlayerAimShot(m, 10);
+            PlayerAimShot(m, 7);
             yield return new WaitForSeconds(0.3f);
         }
     }

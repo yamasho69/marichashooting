@@ -11,11 +11,12 @@ public class EnemyFireMissile : MonoBehaviour {
     public GameObject enemyMissilePrefab;
     public float speed;
     private int timeCount = 0;
+    [Header("ナンフレームおきにMissileを作成するか")]public int missileTime = 600;
 
     void Update() {
         timeCount += 1;
 
-        if (timeCount % 600 == 0) {
+        if (timeCount % missileTime == 0) {
             // 敵のミサイルを生成する
             GameObject enemyMissile = Instantiate(enemyMissilePrefab, transform.position, Quaternion.identity);
 
