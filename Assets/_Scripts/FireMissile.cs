@@ -15,6 +15,7 @@ public class FireMissile : MonoBehaviour {
     [Header("おならSE")] public AudioClip[] onaraSE;
     // ★改良（長押し連射）
     private int timeCount;
+    public float shotBarRecoveryTime = 0.8f;
 
     // ★追加（弾切れ発生）
     // ★改良（ショットパワーの全回復）
@@ -80,7 +81,7 @@ public class FireMissile : MonoBehaviour {
         // ★追加（ショットパワーの回復）
         else {
             if (Time.timeScale == 1) {//これがないとポーズ中にショットパワーが回復する
-                shotPower += 0.8f;
+                shotPower += shotBarRecoveryTime;
 
                 if (shotPower > maxPower) {
                     shotPower = maxPower;

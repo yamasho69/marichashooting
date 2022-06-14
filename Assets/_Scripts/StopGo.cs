@@ -14,7 +14,7 @@ public class StopGo : MonoBehaviour {
     public float stopTime = 3; // ’e‚ª¶¬ŒãA‰½•b‚µ‚½‚ç’â~‚·‚é‚©H
 
     private float stopTimeCount = 0;
-    private float nextStartTime = 2; // ’e‚ª’â~ŒãA‰½•b‚µ‚½‚ç“®‚«o‚·‚©H
+    public float nextStartTime = 2; // ’e‚ª’â~ŒãA‰½•b‚µ‚½‚ç“®‚«o‚·‚©H
 
     private bool stopKey = false;
 
