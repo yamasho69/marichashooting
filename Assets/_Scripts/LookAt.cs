@@ -15,7 +15,7 @@ public class LookAt : MonoBehaviour {
         target = GameObject.Find("Player");
     }
 
-    void Update() {
+    void FixedUpdate() {
         // 「LookAtメソッド」の活用（ポイント）
         //transform.LookAt(target.transform.position);
 

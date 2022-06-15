@@ -44,7 +44,7 @@ public class FireMissile : MonoBehaviour {
         // ★改良（長押し連射）
         // 「GetButtonDown」を「GetButton」に変更する（ポイント）
         // 「GetButton」は「押している間」という意味
-        if (Input.GetButton("Jump")||buttondown) {
+        if (Input.GetButton("Jump") || buttondown) {
 
             if (Time.timeScale == 1) {//これがないとポーズ中にショットできる
                                       // ★追加（弾切れ発生）

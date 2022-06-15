@@ -17,6 +17,7 @@ public class Enemy8Move : MonoBehaviour {
     }
 
     void Update() {
+
         // ˆÚ“®‘¬“x‚É‘Š“–
         xangle += Time.deltaTime * speed;
         yangle += Time.deltaTime * speed * 2;
