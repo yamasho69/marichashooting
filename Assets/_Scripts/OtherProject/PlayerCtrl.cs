@@ -27,11 +27,12 @@ public class PlayerCtrl : MonoBehaviour
 
     void Update()
     {
-        ProcessInputs();
-        if (Input.GetKey(KeyCode.Space)) {
-            Fire();
+        if (Time.timeScale == 1) {//これがないとタイム中に左右でショットパワーを増減できる。
+            ProcessInputs();
+            if (Input.GetKey(KeyCode.Space)) {
+                Fire();
+            }
         }
-
         cooldownTimer -= Time.deltaTime;
     }
 

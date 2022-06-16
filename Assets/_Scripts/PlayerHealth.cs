@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour {
         // 条件文の中に「&& isMuteki == false」を追加
         if (other.gameObject.CompareTag("EnemyMissile") && isMuteki == false) {
             //Destroy(other.gameObject);
+            isMuteki = true;
             GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
             destroySound = GetRandom(clips);
             AudioSource.PlayClipAtPoint(destroySound, Camera.main.transform.position);
@@ -63,7 +64,7 @@ public class PlayerHealth : MonoBehaviour {
         this.gameObject.SetActive(true);
         // ★追加（無敵）
         // 何秒間無敵状態にするかは自由！
-        isMuteki = true;
+        //isMuteki = true;//これはもっと速いタイミングにしないと、連続で残機が減ることがある。
         StartCoroutine("ColorCoroutine");
         Invoke("MutekiOff", mutekiTime);
 

@@ -14,7 +14,9 @@ public class Rotate : MonoBehaviour {
     public float PosZ;
     internal Vector3 pos;
 
-    void FixedUpdate() {
-        transform.Rotate(new Vector3(PosX, PosY, PosZ));
+    void Update() {
+        if (Time.timeScale == 1) {
+            transform.Rotate(new Vector3(PosX, PosY, PosZ));
+        }
     }
 }

@@ -14,8 +14,10 @@ public class ShakeMove : MonoBehaviour {
     }
 
     private void Update() {
-        rb.velocity = -transform.up * speed;
-        // 三角関数の活用（Sin関数）
-        transform.Translate(shakeWidth * Time.deltaTime * Mathf.Sin(Time.time * shakeSpan), -Time.deltaTime * Mathf.Sin(Time.time), 0);
+        if (Time.timeScale == 1) {
+            rb.velocity = -transform.up * speed;
+            // 三角関数の活用（Sin関数）
+            transform.Translate(shakeWidth * Time.deltaTime * Mathf.Sin(Time.time * shakeSpan), -Time.deltaTime * Mathf.Sin(Time.time), 0);
+        }
     }
 }

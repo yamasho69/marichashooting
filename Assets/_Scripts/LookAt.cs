@@ -15,12 +15,13 @@ public class LookAt : MonoBehaviour {
         target = GameObject.Find("Player");
     }
 
-    void FixedUpdate() {
+    void Update() {
         // 「LookAtメソッド」の活用（ポイント）
         //transform.LookAt(target.transform.position);
+        if (Time.timeScale == 1) {
+            var diff = (target.transform.position - transform.position).normalized;
 
-        var diff = (target.transform.position - transform.position).normalized;
-
-        transform.rotation = Quaternion.FromToRotation(Vector3.up, diff);
+            transform.rotation = Quaternion.FromToRotation(Vector3.up, diff);
+        }
     }
 }

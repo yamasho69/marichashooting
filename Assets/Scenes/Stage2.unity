@@ -224,7 +224,7 @@ PrefabInstance:
     - target: {fileID: 4556450639628993522, guid: 9d13a77391355f54b89c3b30e59ff81e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4556450639628993523, guid: 9d13a77391355f54b89c3b30e59ff81e,
         type: 3}
@@ -534,7 +534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885704013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 0}
+  m_LocalPosition: {x: 0, y: 31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370806796}
@@ -553,8 +553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  limitPosition: -17
-  loopPosition: 30
+  limitPosition: -16.3
+  loopPosition: 31
 --- !u!212 &885704016
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1708,8 +1708,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  limitPosition: -17
-  loopPosition: 30
+  limitPosition: -16.3
+  loopPosition: 31
 --- !u!1 &2042711004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +1952,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692208954990751834, guid: d0b700ff466ee2b4c83b4184660da883,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692208954990751834, guid: d0b700ff466ee2b4c83b4184660da883,
+        type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692208954990751834, guid: d0b700ff466ee2b4c83b4184660da883,
+        type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692208954990751834, guid: d0b700ff466ee2b4c83b4184660da883,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692208954990751839, guid: d0b700ff466ee2b4c83b4184660da883,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4692208955702720199, guid: d0b700ff466ee2b4c83b4184660da883,
         type: 3}
@@ -2321,7 +2346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6188921143164876521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2636,6 +2661,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396973540768266579, guid: 9c59f0da393d67245b404c0c57cb510e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7396973540768266591, guid: 9c59f0da393d67245b404c0c57cb510e,
         type: 3}

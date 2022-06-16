@@ -17,20 +17,21 @@ public class Enemy8Move : MonoBehaviour {
     }
 
     void Update() {
+        if (Time.timeScale == 1) {
+            // 移動速度に相当
+            xangle += Time.deltaTime * speed;
+            yangle += Time.deltaTime * speed * 2;
 
-        // 移動速度に相当
-        xangle += Time.deltaTime * speed;
-        yangle += Time.deltaTime * speed * 2;
+            move = move - (downMoveSpeed / 10000);//downmovespeed分、8時の字が下がってくる
 
-        move = move-(downMoveSpeed / 10000);//downmovespeed分、8時の字が下がってくる
-
-        //XとYの値やSinをCosやTanに変えると動きが変わる
-        transform.position = new Vector3(
-            // X軸の幅
-            pos.x + Mathf.Sin(xangle) * x,
-            // Y軸
-            pos.y + move + Mathf.Sin(180+yangle) * y,
-            // Z軸の幅
-            0) ;
+            //XとYの値やSinをCosやTanに変えると動きが変わる
+            transform.position = new Vector3(
+                // X軸の幅
+                pos.x + Mathf.Sin(xangle) * x,
+                // Y軸
+                pos.y + move + Mathf.Sin(180 + yangle) * y,
+                // Z軸の幅
+                0);
+        }
     }
 }
