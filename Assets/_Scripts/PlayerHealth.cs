@@ -32,8 +32,10 @@ public class PlayerHealth : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         // š’Ç‰Ái–³“Gj
         // ğŒ•¶‚Ì’†‚Éu&& isMuteki == falsev‚ğ’Ç‰Á
-        if (other.gameObject.CompareTag("EnemyMissile") && isMuteki == false) {
-            //Destroy(other.gameObject);
+        if ((other.gameObject.CompareTag("EnemyMissile")|| other.gameObject.CompareTag("Enemy")) && isMuteki == false) {
+            if (other.gameObject.CompareTag("EnemyMissile")) {
+                Destroy(other.gameObject);
+            } //“G‚Æ‚Ô‚Â‚©‚Á‚½ê‡‚ÍA“G‚ª‰ó‚ê‚é‚Æ“s‡‚ªˆ«‚¢
             isMuteki = true;
             GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
             destroySound = GetRandom(clips);

@@ -15,6 +15,7 @@ public class ScoreManager : MonoBehaviour {
     public static int score = 0;
     public static int oneUPscore = 500;
     public GameObject oneUPItem;
+    public static string nowStage = "Stage1";//リトライ時に仕様。
     private Text scoreLabel;
 
     // ★追加
@@ -35,7 +36,7 @@ public class ScoreManager : MonoBehaviour {
         score += amount;
         scoreLabel.text = "SCORE:" + score;
 
-        if (score > oneUPscore) {
+        if (score >= oneUPscore) {
             oneUPItem.SetActive(true);
             oneUPscore += 500;
         }

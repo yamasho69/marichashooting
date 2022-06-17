@@ -221,6 +221,8 @@ MonoBehaviour:
   enemyMissilePrefab: {fileID: 5312135591866519350, guid: 101e7a6a3dec4c842aa9ee934ed51284,
     type: 3}
   speed: 200
+  rotate: {fileID: 0}
+  sokushaOn: 0
 --- !u!1 &1719861311834198176
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +270,7 @@ GameObject:
   - component: {fileID: 1719861311946590014}
   m_Layer: 0
   m_Name: EnemyB
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -569,3 +571,6 @@ MonoBehaviour:
   enemyHP: 2
   hpSlider: {fileID: 1719861312210747899}
   scoreValue: 50
+  image: {fileID: 0}
+  maxHP: 0
+  currentHP: 0

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 427194505}
   m_Layer: 0
   m_Name: Remiria
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,6 +165,8 @@ MonoBehaviour:
     type: 3}
   uh: {fileID: 8300000, guid: f0550e8b8cf1aad48a5f5490e5129131, type: 3}
   remiriaHealth: {fileID: 3186003227367742671}
+  nWay: {fileID: 0}
+  spiral: {fileID: 0}
 --- !u!114 &427194505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +231,7 @@ MonoBehaviour:
     type: 3}
   speed: 5
   rotate: {fileID: 3186003227780754997}
+  sokushaOn: 0
 --- !u!114 &3186003227780754997
 MonoBehaviour:
   m_ObjectHideFlags: 0

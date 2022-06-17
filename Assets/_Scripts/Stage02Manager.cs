@@ -24,16 +24,19 @@ public class Stage02Manager : MonoBehaviour {
     public GameObject boss;
     public GameObject stageClear;
 
+    private float totalTime;
 
     void Start()
     {
+        ScoreManager.nowStage = SceneManager.GetActiveScene().name;//リトライ時に仕様
         StartCoroutine("StageStart"); 
     }
 
     private void Update() {
-        Debug.Log(Time.frameCount);
+        totalTime += Time.deltaTime;
+        Debug.Log(totalTime);
 
-        if (enemy9 == null) {
+        if (enemy9 == null && !isClear) {
             Invoke("BossActive", 3.0f);
         }
 
@@ -50,7 +53,7 @@ public class Stage02Manager : MonoBehaviour {
         //ここに処理を書く
         yield return new WaitForSeconds(3f);
         enemy1.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         enemy2.SetActive(true);
         yield return new WaitForSeconds(20f);
         enemy3.SetActive(true);
@@ -60,13 +63,12 @@ public class Stage02Manager : MonoBehaviour {
         enemy5.SetActive(true);
         yield return new WaitForSeconds(2f);
         enemy6.SetActive(true);
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(12f);
         enemy7.SetActive(true);
         yield return new WaitForSeconds(2f);
         enemy8.SetActive(true);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(12f);
         enemy9.SetActive(true);
-        yield return new WaitForSeconds(14f);
         //1フレーム停止
         yield return null;
         //ここに再開後の処理を書く
