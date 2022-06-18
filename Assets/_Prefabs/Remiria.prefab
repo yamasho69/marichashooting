@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 1093616777358920753, guid: b51b5618a09b26d46adacbfc0acbc55e,
     type: 3}
-  sound: {fileID: 8300000, guid: 44f9aaab977c82845bd7d28183091407, type: 3}
+  sound: {fileID: 8300000, guid: 635264522299c0f468f2c6d64e9d7e80, type: 3}
   enemyHP: 40
   hpSlider: {fileID: 0}
   scoreValue: 100
