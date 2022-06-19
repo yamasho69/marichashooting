@@ -15,7 +15,7 @@ public class FireMissile : MonoBehaviour {
     [Header("おならSE")] public AudioClip[] onaraSE;
     // ★改良（長押し連射）
     private int timeCount;
-    public float shotBarRecoveryTime = 0.8f;
+    public float shotBarRecoveryTime = 1.5f;
 
     // ★追加（弾切れ発生）
     // ★改良（ショットパワーの全回復）

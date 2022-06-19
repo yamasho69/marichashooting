@@ -708,6 +708,7 @@ MonoBehaviour:
   speed: 1
   limitPosition: -17
   loopPosition: 30
+  yokoScroll: 0
 --- !u!212 &885704016
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1202,7 +1203,7 @@ PrefabInstance:
     - target: {fileID: 4692208954494278705, guid: d0b700ff466ee2b4c83b4184660da883,
         type: 3}
       propertyPath: shotBarRecoveryTime
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4692208954990751828, guid: d0b700ff466ee2b4c83b4184660da883,
         type: 3}
@@ -2029,6 +2030,7 @@ MonoBehaviour:
   speed: 1
   limitPosition: -17
   loopPosition: 30
+  yokoScroll: 0
 --- !u!1 &2042711004
 GameObject:
   m_ObjectHideFlags: 0

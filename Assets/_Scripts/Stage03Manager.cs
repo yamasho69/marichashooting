@@ -11,7 +11,8 @@ public class Stage03Manager : MonoBehaviour {
     public AudioClip clearSound;
     public string nextStageName;
     private bool isClear = false;
-
+    private bool isStart = false;
+    public GameObject onmyo;
     public GameObject enemy1;
     public GameObject enemy2;
     public GameObject enemy3;
@@ -29,12 +30,17 @@ public class Stage03Manager : MonoBehaviour {
     void Start()
     {
         ScoreManager.nowStage = SceneManager.GetActiveScene().name;//リトライ時に仕様
-        StartCoroutine("StageStart"); 
+
     }
 
     private void Update() {
         totalTime += Time.deltaTime;
         Debug.Log(totalTime);
+
+        if (onmyo == null && !isStart) {
+            StartCoroutine("StageStart");
+            isStart = true;
+        }
 
         if (enemy9 == null && !isClear) {
             Invoke("BossActive", 3.0f);
@@ -51,23 +57,27 @@ public class Stage03Manager : MonoBehaviour {
 
     IEnumerator StageStart() {
         //ここに処理を書く
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         enemy1.SetActive(true);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(16.5f);
+
         enemy2.SetActive(true);
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(0.5f);
         enemy3.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(15f);
+
         enemy4.SetActive(true);
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(0.5f);
         enemy5.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(19f);
+
         enemy6.SetActive(true);
-        yield return new WaitForSeconds(12f);
+        yield return new WaitForSeconds(0.5f);
         enemy7.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         enemy8.SetActive(true);
-        yield return new WaitForSeconds(12f);
+
+        yield return new WaitForSeconds(30f);
         enemy9.SetActive(true);
         //1フレーム停止
         yield return null;
