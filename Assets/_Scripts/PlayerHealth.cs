@@ -58,6 +58,10 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
     void GameOver() {
+        if (ScoreManager.score > ScoreManager.highScore) { //ハイスコアを更新していた場合
+            ScoreManager.highScore = ScoreManager.score;
+            ScoreManager.highScoreUpdate = true;
+        }
         SceneManager.LoadScene("GameOver");
     }
     // ★★（追加）

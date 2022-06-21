@@ -22,6 +22,7 @@ public class Retry: MonoBehaviour {
         // 他スクリプトの中にある「静的変数」の操作方法（ポイント）
         ScoreManager.score = 0;
         ScoreManager.oneUPscore = 500;
+        ScoreManager.highScoreUpdate = false;//ハイスコアを更新していた場合は更新していない状態に戻す。
         PlayerHealth.zanki = 3;
         Time.timeScale = 1;//ポーズから戻った場合は時間を動かす。
     }

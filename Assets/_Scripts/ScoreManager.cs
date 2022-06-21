@@ -17,6 +17,8 @@ public class ScoreManager : MonoBehaviour {
     public GameObject oneUPItem;
     public static string nowStage = "Stage1";//リトライ時に仕様。
     private Text scoreLabel;
+    public static int highScore;//ハイスコア記録
+    public static bool highScoreUpdate; //ハイスコア更新
 
     // ★追加
     public string nextStageName;
@@ -26,6 +28,7 @@ public class ScoreManager : MonoBehaviour {
         // 「Text」コンポーネントにアクセスして取得する（ポイント）
         scoreLabel = GetComponent<Text>();
         scoreLabel.text = "SCORE:" + score;
+        highScore = PlayerPrefs.GetInt("SCORE", 0);
     }
 
     // ★追加
