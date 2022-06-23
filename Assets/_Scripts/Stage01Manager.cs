@@ -28,6 +28,7 @@ public class Stage01Manager : MonoBehaviour {
     void Start()
     {
         ScoreManager.nowStage = SceneManager.GetActiveScene().name;//リトライ時に仕様
+        ScoreManager.noContinue = true;//第1ステージ開始時にノーコンティニュー判定をtrueにする。
         StartCoroutine("StageStart"); 
     }
 

@@ -23,6 +23,7 @@ public class Retry: MonoBehaviour {
         ScoreManager.score = 0;
         ScoreManager.oneUPscore = 500;
         ScoreManager.highScoreUpdate = false;//ハイスコアを更新していた場合は更新していない状態に戻す。
+        ScoreManager.noContinue = false;//ノーコンティニュー判定をfalseにする。
         PlayerHealth.zanki = 3;
         Time.timeScale = 1;//ポーズから戻った場合は時間を動かす。
     }

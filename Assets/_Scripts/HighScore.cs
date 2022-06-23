@@ -18,7 +18,8 @@ public class HighScore : MonoBehaviour
         text = this.gameObject.GetComponent<Text>();
         if (ScoreManager.highScoreUpdate) {
             highScoreText.SetActive(true);//highScoreが更新されていたら表示
-            
+            PlayerPrefs.SetInt("SCORE", ScoreManager.highScore);//highscoreをPrefsにセーブ
+            PlayerPrefs.Save();//https://futabazemi.net/unity/high_score/
         }
     }
 

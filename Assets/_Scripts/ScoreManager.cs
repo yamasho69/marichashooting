@@ -19,6 +19,7 @@ public class ScoreManager : MonoBehaviour {
     private Text scoreLabel;
     public static int highScore;//ハイスコア記録
     public static bool highScoreUpdate; //ハイスコア更新
+    public static bool noContinue;//ノーコンティニューかどうか
 
     // ★追加
     public string nextStageName;
