@@ -20,6 +20,7 @@ public class ScoreManager : MonoBehaviour {
     public static int highScore;//ハイスコア記録
     public static bool highScoreUpdate; //ハイスコア更新
     public static bool noContinue;//ノーコンティニューかどうか
+    public bool highScoreHyoji;//タイトル画面のハイスコア表示のみチェック入れる
 
     // ★追加
     public string nextStageName;
@@ -30,6 +31,9 @@ public class ScoreManager : MonoBehaviour {
         scoreLabel = GetComponent<Text>();
         scoreLabel.text = "SCORE:" + score;
         highScore = PlayerPrefs.GetInt("SCORE", 0);
+        if (highScoreHyoji) {
+            scoreLabel.text = "HIGHSCORE:" + highScore;
+        }
     }
 
     // ★追加

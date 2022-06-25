@@ -9,6 +9,10 @@ public class BackGround : MonoBehaviour {
     [SerializeField] float loopPosition;
     public bool yokoScroll = false;//チェックが入ってたら横スクロール
 
+    private void Start() {
+        Application.targetFrameRate = 60;
+    }
+
     void Update() {
         if (!yokoScroll) {
             //下方向にスクロール
