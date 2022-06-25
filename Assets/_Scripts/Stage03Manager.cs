@@ -25,7 +25,7 @@ public class Stage03Manager : MonoBehaviour {
     public GameObject boss;
     public GameObject stageClear;
 
-    private float totalTime;
+    //private float totalTime;
 
     void Start()
     {
@@ -34,8 +34,8 @@ public class Stage03Manager : MonoBehaviour {
     }
 
     private void Update() {
-        totalTime += Time.deltaTime;
-        Debug.Log(totalTime);
+        //totalTime += Time.deltaTime;
+        //Debug.Log(totalTime);
 
         if (onmyo == null && !isStart) {
             StartCoroutine("StageStart");

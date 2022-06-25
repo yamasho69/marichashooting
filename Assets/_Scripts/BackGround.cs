@@ -10,7 +10,6 @@ public class BackGround : MonoBehaviour {
     public bool yokoScroll = false;//チェックが入ってたら横スクロール
 
     private void Start() {
-        Application.targetFrameRate = 60;
     }
 
     void Update() {
@@ -19,7 +18,7 @@ public class BackGround : MonoBehaviour {
             transform.position -= new Vector3(0, Time.deltaTime * speed);
 
             //Yが-11まで来れば、yPositionまで移動する
-            if (transform.position.y <= limitPosition) {
+            if (transform.position.y < limitPosition) {
                 transform.position = new Vector2(0, loopPosition);
             }
         } else {
@@ -27,7 +26,7 @@ public class BackGround : MonoBehaviour {
             transform.position -= new Vector3(Time.deltaTime * speed,0);
 
             //Xが-11まで来れば、xPositionまで移動する
-            if (transform.position.x <= limitPosition) {
+            if (transform.position.x < limitPosition) {
                 transform.position = new Vector2(loopPosition,transform.position.y);
             }
         }

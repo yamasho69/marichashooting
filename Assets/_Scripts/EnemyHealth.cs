@@ -71,7 +71,7 @@ public class EnemyHealth : MonoBehaviour {
                 Destroy(this.gameObject);
                 if (sound) {
                     // 効果音を出す
-                    AudioSource.PlayClipAtPoint(sound, Camera.main.transform.position, 0.1f);
+                    AudioSource.PlayClipAtPoint(sound, Camera.main.transform.position,0.8f);
                 }
                 if (effectPrefab) {
                     // エフェクトを発生させる

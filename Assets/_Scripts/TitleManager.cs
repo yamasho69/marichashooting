@@ -16,6 +16,7 @@ public class TitleManager : MonoBehaviour
     //public AudioClip bGM;
     public GameObject musicName;
     public GameObject buttons;
+    public GameObject highScore;
     private AudioSource audioSource;
 
     void Start()
@@ -45,6 +46,7 @@ public class TitleManager : MonoBehaviour
         yield return new WaitForSeconds(3.1f);
         audioSource.Play();
         buttons.SetActive(true);
+        highScore.SetActive(true);
         musicName.SetActive(true);
         yield return null;
     }

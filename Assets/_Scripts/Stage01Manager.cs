@@ -33,7 +33,7 @@ public class Stage01Manager : MonoBehaviour {
     }
 
     private void Update() {
-        Debug.Log(Time.frameCount);
+        //Debug.Log(Time.frameCount);
 
         if (enemy9 == null) {
             Invoke("BossActive", 3.0f);

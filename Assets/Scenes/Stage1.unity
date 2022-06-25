@@ -575,6 +575,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &707861579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7396973542206358869, guid: 9c59f0da393d67245b404c0c57cb510e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1732926731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &729824298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -687,7 +693,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885704013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 30, z: 0}
+  m_LocalPosition: {x: 0, y: 31.00586, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370806796}
@@ -706,8 +712,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  limitPosition: -17
-  loopPosition: 30
+  limitPosition: -15.9
+  loopPosition: 32
   yokoScroll: 0
 --- !u!212 &885704016
 SpriteRenderer:
@@ -1372,7 +1378,7 @@ PrefabInstance:
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
       propertyPath: spawnCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
@@ -1586,7 +1592,7 @@ PrefabInstance:
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
       propertyPath: spawnCount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
@@ -1789,6 +1795,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7396973541000251022, guid: 9c59f0da393d67245b404c0c57cb510e,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7396973541246568387, guid: 9c59f0da393d67245b404c0c57cb510e,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -1834,6 +1845,23 @@ PrefabInstance:
       propertyPath: oneUPItem
       value: 
       objectReference: {fileID: 1588797889}
+    - target: {fileID: 7396973542206358866, guid: 9c59f0da393d67245b404c0c57cb510e,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Stage1
+
+        Clear!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396973542206358869, guid: 9c59f0da393d67245b404c0c57cb510e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396973542319812779, guid: 9c59f0da393d67245b404c0c57cb510e,
+        type: 3}
+      propertyPath: m_Text
+      value: Stage1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c59f0da393d67245b404c0c57cb510e, type: 3}
 --- !u!1001 &1873819224
@@ -2028,8 +2056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  limitPosition: -17
-  loopPosition: 30
+  limitPosition: -15.9
+  loopPosition: 32
   yokoScroll: 0
 --- !u!1 &2042711004
 GameObject:
@@ -2072,7 +2100,7 @@ MonoBehaviour:
   enemy8: {fileID: 1592585022}
   enemy9: {fileID: 1484144295}
   boss: {fileID: 1873819226}
-  stageClear: {fileID: 0}
+  stageClear: {fileID: 707861579}
 --- !u!4 &2042711006
 Transform:
   m_ObjectHideFlags: 0

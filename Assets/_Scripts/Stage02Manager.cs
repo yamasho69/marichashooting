@@ -24,8 +24,6 @@ public class Stage02Manager : MonoBehaviour {
     public GameObject boss;
     public GameObject stageClear;
 
-    private float totalTime;
-
     void Start()
     {
         ScoreManager.nowStage = SceneManager.GetActiveScene().name;//リトライ時に仕様
@@ -33,9 +31,6 @@ public class Stage02Manager : MonoBehaviour {
     }
 
     private void Update() {
-        totalTime += Time.deltaTime;
-        Debug.Log(totalTime);
-
         if (enemy9 == null && !isClear) {
             Invoke("BossActive", 3.0f);
         }
