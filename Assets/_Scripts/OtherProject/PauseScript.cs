@@ -48,6 +48,8 @@ public class PauseScript : MonoBehaviour{
             //goToTitleButton.SetActive(true);
             //jumpButton.SetActive(false);
             joyStick.SetActive(false);
+            var ab = joyStick.GetComponent<FixedJoystick>();
+            ab.OnPointerUp(null);//ドラッグを終了したことにする
         }
     }
 }

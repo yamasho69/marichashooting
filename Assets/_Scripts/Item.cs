@@ -5,16 +5,16 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     //public GameObject effectPrefab;
-    public AudioClip sound;
-    
+    [Header("アイテムvoice")]public AudioClip[] clips;
+    private AudioClip sound;
 
     // （ポイント）先頭に「public」をつけること。
     public void ItemBase(GameObject target)
     {
         //GameObject effect = Instantiate(effectPrefab, target.transform.position, Quaternion.identity);
         //Destroy(effect, 1.0f);
-        AudioSource.PlayClipAtPoint(sound, new Vector3(0, 0, -10));
-
+        sound = GetRandom(clips);
+        AudioSource.PlayClipAtPoint(sound, Camera.main.transform.position);
         //（ポイント）
         // アイテムは破壊ではなく非アクティブ状態にする。
         // パワーアップアイテムとの関係から。
@@ -22,5 +22,8 @@ public class Item : MonoBehaviour
 
         // ミサイルを破壊する。
         //Destroy(target.gameObject);
+    }
+    internal static T GetRandom<T>(params T[] Params) {
+        return Params[UnityEngine.Random.Range(0, Params.Length)];
     }
 }

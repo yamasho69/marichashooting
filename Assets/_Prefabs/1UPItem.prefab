@@ -97,7 +97,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c305d9d7af8fbb419799b5548ebd572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 8ea5db3564cd3db4d917d81bc0b0fc34, type: 3}
+  clips:
+  - {fileID: 8300000, guid: 8ea5db3564cd3db4d917d81bc0b0fc34, type: 3}
+  - {fileID: 8300000, guid: f0944ec8c1fd6ed42bee6a37dd0d0446, type: 3}
+  - {fileID: 8300000, guid: 5525588c81453864ba7f569433d50451, type: 3}
+  - {fileID: 8300000, guid: 3bf28b2a8398a2a4fa238af17835920b, type: 3}
+  - {fileID: 8300000, guid: b0d5b3d497f81d1429cf3d3a6d82835c, type: 3}
+  - {fileID: 8300000, guid: 346cda685dfd49d40a1c33e2e033c0dd, type: 3}
+  - {fileID: 8300000, guid: 08bf91885276ebd4899493353614b711, type: 3}
+  - {fileID: 8300000, guid: a79a28ba423b1f8489bdab9ddf24e44c, type: 3}
+  - {fileID: 8300000, guid: ab77c70192ffcee4ea54423de002e423, type: 3}
+  - {fileID: 8300000, guid: ab77c70192ffcee4ea54423de002e423, type: 3}
 --- !u!58 &7605508480465022753
 CircleCollider2D:
   m_ObjectHideFlags: 0

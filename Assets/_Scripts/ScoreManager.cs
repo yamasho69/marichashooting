@@ -12,13 +12,13 @@ public class ScoreManager : MonoBehaviour {
     // 静的変数（ポイント）
     // public staticをつけることで、このScoreManagerスクリプトがついている他のオブジェクトと
     // scoreのデータを共有することができるようになります。
-    public static int score = 0;
+    [SerializeField] public static int score = 0;
     public static int oneUPscore = 500;
     public GameObject oneUPItem;
     public static string nowStage = "Stage1";//リトライ時に仕様。
     private Text scoreLabel;
-    public static int highScore;//ハイスコア記録
-    public static bool highScoreUpdate; //ハイスコア更新
+    [SerializeField]public static int highScore;//ハイスコア記録
+    [SerializeField]public static bool highScoreUpdate; //ハイスコア更新
     public static bool noContinue;//ノーコンティニューかどうか
     public bool highScoreHyoji;//タイトル画面のハイスコア表示のみチェック入れる
 
