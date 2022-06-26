@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveH = 0;
     private float moveV = 0;
     private bool joystickOn;
-    void Update() {
+    void FixedUpdate() {
 
         float joyH = joystick.Horizontal;
         float joyV = joystick.Vertical;

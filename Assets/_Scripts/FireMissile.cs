@@ -14,8 +14,13 @@ public class FireMissile : MonoBehaviour {
     public AudioSource sfxSource;
     [Header("おならSE")] public AudioClip[] onaraSE;
     // ★改良（長押し連射）
-    private int timeCount;
-    public float shotBarRecoveryTime = 1.5f;
+    //private float timeCount;
+    [Header("発射間隔")]public float interval; // 何秒間隔で撃つか
+    private float timer = 0.0f;　// 時間カウント用のタイマー
+
+    //参考　https://teratail.com/questions/304496
+
+    public float shotBarRecoveryTime;
 
     // ★追加（弾切れ発生）
     // ★改良（ショットパワーの全回復）
@@ -39,7 +44,12 @@ public class FireMissile : MonoBehaviour {
 
     void Update() {
         // ★改良（長押し連射）
-        timeCount += 1;
+        //timeCount += Time.deltaTime;
+        //Debug.Log(timeCount);
+
+        if (timer > 0.0f) {
+            timer -= Time.deltaTime;
+        }
 
         // ★改良（長押し連射）
         // 「GetButtonDown」を「GetButton」に変更する（ポイント）
@@ -54,7 +64,7 @@ public class FireMissile : MonoBehaviour {
                 }
 
                 // ★追加（弾切れ発生）
-                shotPower -= 1;
+                shotPower -=  500 * Time.deltaTime;
 
                 // ★追加（パワー残量の表示）
                 powerSlider.value = shotPower;
@@ -62,7 +72,7 @@ public class FireMissile : MonoBehaviour {
                 // ★改良（長押し連射）
                 // 「5」の部分の数字を変えると「連射の間隔」を変更することができます（ポイント）
                 // 「%」と「==」の意味合いを復習しましょう。
-                if (timeCount % 130 == 0) {
+                if (timer <= 0.0f) {
                     // プレハブからミサイルオブジェクトを作成し、それをmissileという名前の箱に入れる。
                     GameObject missile = Instantiate(missilePrefab, transform.position, Quaternion.identity);
 
@@ -71,6 +81,8 @@ public class FireMissile : MonoBehaviour {
                     rigidbody2D.velocity = transform.up * missileSpeed;
 
                     RandomizeSfx(onaraSE);
+
+                    timer = interval; // 間隔をセット
 
                     // 発射したミサイルを２秒後に破壊（削除）する。
                     Destroy(missile, 0.6f);
@@ -81,7 +93,7 @@ public class FireMissile : MonoBehaviour {
         // ★追加（ショットパワーの回復）
         else {
             if (Time.timeScale == 1) {//これがないとポーズ中にショットパワーが回復する
-                shotPower += shotBarRecoveryTime;
+                shotPower += shotBarRecoveryTime * Time.deltaTime;
 
                 if (shotPower > maxPower) {
                     shotPower = maxPower;

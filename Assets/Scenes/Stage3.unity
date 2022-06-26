@@ -2249,7 +2249,7 @@ PrefabInstance:
     - target: {fileID: 4692208954494278705, guid: d0b700ff466ee2b4c83b4184660da883,
         type: 3}
       propertyPath: shotBarRecoveryTime
-      value: 1.5
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4692208954990751828, guid: d0b700ff466ee2b4c83b4184660da883,
         type: 3}
