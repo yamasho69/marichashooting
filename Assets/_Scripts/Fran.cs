@@ -56,15 +56,14 @@ public class Fran : MonoBehaviour
 
         //whileがtrueならループ
         while (true) {
-            //ルーミアのHPが最大HPの2/3以上の場合
+            //フランのHPが最大HPの2/3以上の場合
             if (furanHealth.currentHP > furanHealth.maxHP * 2 / 3) {
                 spiral1.SetActive(true);
-                yield return new WaitForSeconds(0.4f);
                 spiral2.SetActive(true);
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.4f);
                 nWay.SetActive(true);
-
-                //ルーミアのHPが最大HPの1/3以上の場合
+                yield return new WaitForSeconds(0.1f);
+                //フランのHPが最大HPの1/3以上の場合
             } else if (furanHealth.currentHP > furanHealth.maxHP * 1 / 3) {
                 nWay.SetActive(false);
                 yield return WaveNPlayerAimShot(10, 4);

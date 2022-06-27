@@ -2280,6 +2280,8 @@ MonoBehaviour:
   noContinueClear: {fileID: 1264394976}
   nomalVoice: {fileID: 8300000, guid: f02fd589251cd2c4cb76b3db541a1c0d, type: 3}
   noContinueVoice: {fileID: 8300000, guid: 6faa52431c7c62946990e898fae40000, type: 3}
+  hakushumabara: {fileID: 8300000, guid: 7841ce269a3b7614995c22ab6552db4f, type: 3}
+  daikassai: {fileID: 8300000, guid: db5942503ff8bfd4ab4ab36f8b70ed91, type: 3}
   button: {fileID: 1050624926}
 --- !u!4 &1857314074
 Transform:
@@ -4127,7 +4129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oneUPItem: {fileID: 0}
   highScoreHyoji: 0
-  nextStageName: Stage2
+  nextStageName: Stage1
 --- !u!114 &7396973541800273485
 MonoBehaviour:
   m_ObjectHideFlags: 0

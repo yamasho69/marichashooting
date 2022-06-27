@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6748771580378368498
 Transform:
   m_ObjectHideFlags: 0
@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stopGoPrefab: {fileID: 5567321725390950167, guid: 5bfa04321a26b7f458bda0452202ce1d,
     type: 3}
+  missileTime: 1

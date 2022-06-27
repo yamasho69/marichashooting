@@ -18,7 +18,7 @@ public class BackGround : MonoBehaviour {
             transform.position -= new Vector3(0, Time.deltaTime * speed);
 
             //Y‚ª-11‚Ü‚Å—ˆ‚ê‚ÎAyPosition‚Ü‚ÅˆÚ“®‚·‚é
-            if (transform.position.y < limitPosition) {
+            if (transform.position.y <= limitPosition) {
                 transform.position = new Vector2(0, loopPosition);
             }
         } else {
@@ -26,7 +26,7 @@ public class BackGround : MonoBehaviour {
             transform.position -= new Vector3(Time.deltaTime * speed,0);
 
             //X‚ª-11‚Ü‚Å—ˆ‚ê‚ÎAxPosition‚Ü‚ÅˆÚ“®‚·‚é
-            if (transform.position.x < limitPosition) {
+            if (transform.position.x <= limitPosition) {
                 transform.position = new Vector2(loopPosition,transform.position.y);
             }
         }

@@ -49,4 +49,4 @@ MonoBehaviour:
   enemyTransform: {fileID: 0}
   upperLimit: 0
   bottomLimit: 0
-  missileTime: 600
+  missileTime: 3

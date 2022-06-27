@@ -22,7 +22,7 @@ public class Enemy8Move : MonoBehaviour {
             xangle += Time.deltaTime * speed;
             yangle += Time.deltaTime * speed * 2;
 
-            move = move - (downMoveSpeed / 10000);//downmovespeed•ªA8‚Ìš‚ª‰º‚ª‚Á‚Ä‚­‚é
+            move = move - Time.deltaTime*downMoveSpeed/10;//downmovespeed•ªA8‚Ìš‚ª‰º‚ª‚Á‚Ä‚­‚é
 
             //X‚ÆY‚Ì’l‚âSin‚ğCos‚âTan‚É•Ï‚¦‚é‚Æ“®‚«‚ª•Ï‚í‚é
             transform.position = new Vector3(

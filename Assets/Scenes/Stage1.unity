@@ -2202,8 +2202,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7676760882989572237, guid: aa764b87c6208024c94d81ee75202ef3,
         type: 3}
+      propertyPath: maxHP
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676760882989572237, guid: aa764b87c6208024c94d81ee75202ef3,
+        type: 3}
       propertyPath: enemyHP
-      value: 35
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 7676760882989572237, guid: aa764b87c6208024c94d81ee75202ef3,
         type: 3}

@@ -45,4 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMissilePrefab: {fileID: 6064361613874499212, guid: e4b262f31be595949b898bac25b998d0,
     type: 3}
-  speed: 10
+  speed: 5
+  enemyTransform: {fileID: 0}
+  upperLimit: 0
+  bottomLimit: 0
+  missileTime: 1

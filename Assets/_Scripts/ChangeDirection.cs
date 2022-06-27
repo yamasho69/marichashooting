@@ -5,9 +5,9 @@ using UnityEngine;
 public class ChangeDirection : MonoBehaviour {
     private Rigidbody2D rb;
     private Vector3 pos;
-    private int timeCount;
+    private float timeCount;
     public float speed;
-    [Header("一度停まるタイム。デフォルト180")]public int stopTime;
+    [Header("一度停まるタイム。デフォルト180")]public float stopTime;
     [Header("方向転換するときにx方向にかける力。デフォルト135")]public int x;
     [Header("方向転換するときにy方向にかける力。デフォルト135")]public int y;
 
@@ -18,7 +18,7 @@ public class ChangeDirection : MonoBehaviour {
 
     void Update() {
         pos = transform.position;
-        timeCount += 1;//テキストから変更、敵のポジションではなく、スポーンからの時間経過で方向転換が発生する
+        timeCount += Time.deltaTime;//テキストから変更、敵のポジションではなく、スポーンからの時間経過で方向転換が発生する
 
         if (timeCount > stopTime) {
             // いったん速度を０にする。
@@ -27,7 +27,7 @@ public class ChangeDirection : MonoBehaviour {
             // 異方向に力を加える。xとyに数値を入れると方向転換
             rb.AddForce(new Vector3(x, y, 0) * Time.deltaTime * -30);
         }
-        if (timeCount > stopTime + 25) {//速度を元に戻す。下方向に進む。
+        if (timeCount > stopTime + 2f) {//速度を元に戻す。下方向に進む。
             rb.velocity = -transform.up * speed;
         }
     }

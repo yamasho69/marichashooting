@@ -631,8 +631,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3186003227780754996, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186003227780754996, guid: 93915cdede2a86741b287c5fe752115c,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186003227780754996, guid: 93915cdede2a86741b287c5fe752115c,
+        type: 3}
+      propertyPath: missileTime
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 3186003227780754996, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
@@ -643,7 +653,7 @@ PrefabInstance:
     - target: {fileID: 3186003227780754997, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
       propertyPath: PosZ
-      value: 5
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 3186003227780754997, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
@@ -880,7 +890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885704013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.18, z: 0}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 370806796}
@@ -899,8 +909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  limitPosition: -10.18
-  loopPosition: 10.18
+  limitPosition: -10
+  loopPosition: 10
   yokoScroll: 0
 --- !u!212 &885704016
 SpriteRenderer:
@@ -960,6 +970,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1704476270}
     m_Modifications:
+    - target: {fileID: 1362795730, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362795730, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362795730, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362795730, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362795730, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362795730, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362795731, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
+      propertyPath: PosZ
+      value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362795732, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1362795732, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
+      propertyPath: missileTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1859898560786468525, guid: a52ea21f962521c4d97e39442d12cb2c,
         type: 3}
       propertyPath: wayNumber
@@ -1034,6 +1080,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186003227780754996, guid: a52ea21f962521c4d97e39442d12cb2c,
+        type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186003227780754996, guid: a52ea21f962521c4d97e39442d12cb2c,
+        type: 3}
+      propertyPath: sokushaOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186003227780754996, guid: a52ea21f962521c4d97e39442d12cb2c,
+        type: 3}
+      propertyPath: missileTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186003227780754997, guid: a52ea21f962521c4d97e39442d12cb2c,
+        type: 3}
+      propertyPath: PosZ
+      value: 0.86
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a52ea21f962521c4d97e39442d12cb2c, type: 3}
@@ -2058,8 +2124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  limitPosition: -10.18
-  loopPosition: 10.18
+  limitPosition: -10
+  loopPosition: 10
   yokoScroll: 0
 --- !u!1 &2042711004
 GameObject:
@@ -2759,7 +2825,7 @@ PrefabInstance:
     - target: {fileID: 2489719093843711344, guid: 6c0845579ca84884a96369218addaa7b,
         type: 3}
       propertyPath: missileTime
-      value: 600
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3082229407241945856, guid: 6c0845579ca84884a96369218addaa7b,
         type: 3}

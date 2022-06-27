@@ -53,7 +53,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a1b48ab968fde004f8a3864c0eebd543, type: 3}
   - {fileID: 8300000, guid: 79a95255553a50e449309fde08475f7a, type: 3}
   - {fileID: 8300000, guid: d7c1091c3c662be43899a67acd9c297d, type: 3}
-  interval: 0.2
+  interval: 0.3
   shotBarRecoveryTime: 1000
   maxPower: 2600
   shotPower: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2f0f4fe70019243b51d02d380c1c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.3
+  moveSpeed: 0.13
   left: -2.35
   right: 2.35
   up: 4.5

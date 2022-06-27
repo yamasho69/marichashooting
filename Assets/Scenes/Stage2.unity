@@ -560,7 +560,7 @@ PrefabInstance:
     - target: {fileID: 3186003227780754996, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
       propertyPath: speed
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3186003227780754996, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
@@ -569,10 +569,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3186003227780754996, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
+      propertyPath: sokushaOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186003227780754996, guid: 93915cdede2a86741b287c5fe752115c,
+        type: 3}
+      propertyPath: missileTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186003227780754996, guid: 93915cdede2a86741b287c5fe752115c,
+        type: 3}
       propertyPath: enemyMissilePrefab
       value: 
       objectReference: {fileID: 6064361613874499212, guid: 3b2ce5bb4875d814393446c7a5999b96,
         type: 3}
+    - target: {fileID: 3186003227780754997, guid: 93915cdede2a86741b287c5fe752115c,
+        type: 3}
+      propertyPath: PosZ
+      value: -1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3186003227780754997, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
       propertyPath: m_Enabled
@@ -612,6 +627,71 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2104133642}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &591982310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 591982311}
+  - component: {fileID: 591982313}
+  - component: {fileID: 591982312}
+  m_Layer: 0
+  m_Name: EnemyFireMissileB_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &591982311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591982310}
+  m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1662580761}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
+--- !u!114 &591982312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591982310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5a8b6eb13cfa64ebba33e8f1ed6b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosX: 0
+  PosY: 0
+  PosZ: -1.5
+--- !u!114 &591982313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591982310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c516d43ed90161940ab711a4e3deb1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMissilePrefab: {fileID: 6064361613874499212, guid: 3b2ce5bb4875d814393446c7a5999b96,
+    type: 3}
+  speed: 8
+  rotate: {fileID: 591982312}
+  sokushaOn: 0
+  missileTime: 0.15
 --- !u!4 &817563807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1572152124756813075, guid: e8ed7594b76823e4a80f2aa871d588d5,
@@ -1306,6 +1386,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 427194502}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1662580761 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3186003227780755003, guid: 93915cdede2a86741b287c5fe752115c,
+    type: 3}
+  m_PrefabInstance: {fileID: 427194502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1670205779 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7396973540768266591, guid: 9c59f0da393d67245b404c0c57cb510e,
@@ -1383,6 +1469,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1913255423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1913255424}
+  - component: {fileID: 1913255426}
+  - component: {fileID: 1913255425}
+  m_Layer: 0
+  m_Name: EnemyFireMissileB_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1913255424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913255423}
+  m_LocalRotation: {x: 0, y: -0, z: 0.9659259, w: -0.25881898}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1662580761}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 210}
+--- !u!114 &1913255425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913255423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5a8b6eb13cfa64ebba33e8f1ed6b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PosX: 0
+  PosY: 0
+  PosZ: -1.5
+--- !u!114 &1913255426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913255423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c516d43ed90161940ab711a4e3deb1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMissilePrefab: {fileID: 6064361613874499212, guid: 3b2ce5bb4875d814393446c7a5999b96,
+    type: 3}
+  speed: 8
+  rotate: {fileID: 1913255425}
+  sokushaOn: 0
+  missileTime: 0.15
 --- !u!1 &1914209289 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3186003227367742707, guid: 93915cdede2a86741b287c5fe752115c,
@@ -2231,6 +2382,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1704476270}
     m_Modifications:
+    - target: {fileID: 2489719093843711344, guid: 6c0845579ca84884a96369218addaa7b,
+        type: 3}
+      propertyPath: missileTime
+      value: 2.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3082229407241945856, guid: 6c0845579ca84884a96369218addaa7b,
         type: 3}
       propertyPath: m_RootOrder

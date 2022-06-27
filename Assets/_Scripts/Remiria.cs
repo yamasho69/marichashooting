@@ -77,10 +77,10 @@ public class Remiria : MonoBehaviour
             } else if (remiriaHealth.currentHP > remiriaHealth.maxHP * 1 / 3) {
                 nWay.SetActive(true);
                 spiral.SetActive(false);
-                yield return new WaitForSeconds(1.2f);
+                yield return new WaitForSeconds(1.0f);
                 spiral.SetActive(true);
                 nWay.SetActive(false);
-                yield return new WaitForSeconds(4f);
+                yield return new WaitForSeconds(8f);
             } else {
                 bulletType = BulletType.Big;
                 nWay.SetActive(false);

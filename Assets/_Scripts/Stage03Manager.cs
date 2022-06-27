@@ -50,6 +50,10 @@ public class Stage03Manager : MonoBehaviour {
         if (boss==null && !isClear) {
             AudioSource.PlayClipAtPoint(clearSound, Camera.main.transform.position);
             isClear = true;
+            if (ScoreManager.score > ScoreManager.highScore) { //ハイスコアを更新していた場合
+                ScoreManager.highScore = ScoreManager.score;
+                ScoreManager.highScoreUpdate = true;
+            }
             Invoke("StageClearText", 2.0f);
             Invoke("StageClear", 5.0f);
         }
@@ -77,7 +81,7 @@ public class Stage03Manager : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         enemy8.SetActive(true);
 
-        yield return new WaitForSeconds(25f);
+        yield return new WaitForSeconds(20f);
         enemy9.SetActive(true);
         //1フレーム停止
         yield return null;

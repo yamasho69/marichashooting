@@ -46,4 +46,7 @@ MonoBehaviour:
   enemyMissilePrefab: {fileID: 6064361613874499212, guid: af5cddc490e3f8c449261c0a28aa6ffa,
     type: 3}
   speed: 8
-  missileTime: 64
+  enemyTransform: {fileID: 0}
+  upperLimit: 0
+  bottomLimit: 0
+  missileTime: 0.08

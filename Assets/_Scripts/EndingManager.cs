@@ -13,14 +13,18 @@ public class EndingManager : MonoBehaviour
     public GameObject noContinueClear;
     public AudioClip nomalVoice;
     public AudioClip noContinueVoice;
+    public AudioClip hakushumabara;
+    public AudioClip daikassai;
     public GameObject button;
     void Start()
     {
         if (ScoreManager.noContinue) {
+            AudioSource.PlayClipAtPoint(daikassai, Camera.main.transform.position);
             noContinueClear.SetActive(true);
             AudioSource.PlayClipAtPoint(noContinueVoice, Camera.main.transform.position);
         } else {
             nomalClear.SetActive(true);
+            AudioSource.PlayClipAtPoint(hakushumabara, Camera.main.transform.position);
             AudioSource.PlayClipAtPoint(nomalVoice, Camera.main.transform.position);
         }
 
