@@ -117,7 +117,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 334b5777a32ed62419790e7d559f46ef, type: 3}
   enemyHP: 1
   hpSlider: {fileID: 0}
-  scoreValue: 10
+  scoreValue: 5
   image: {fileID: 0}
   maxHP: 0
   currentHP: 0

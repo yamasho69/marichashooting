@@ -37,8 +37,9 @@ public class Stage02Manager : MonoBehaviour {
 
 
         if (boss==null && !isClear) {
-            AudioSource.PlayClipAtPoint(clearSound, Camera.main.transform.position);
+            
             isClear = true;
+            Invoke("ClearVoice", 1.5f);
             Invoke("StageClearText", 2.0f);
             Invoke("StageClear", 5.0f);
         }
@@ -62,7 +63,7 @@ public class Stage02Manager : MonoBehaviour {
         enemy7.SetActive(true);
         yield return new WaitForSeconds(2f);
         enemy8.SetActive(true);
-        yield return new WaitForSeconds(12f);
+        yield return new WaitForSeconds(16.5f);
         enemy9.SetActive(true);
         //1ÉtÉåÅ[ÉÄí‚é~
         yield return null;
@@ -79,5 +80,9 @@ public class Stage02Manager : MonoBehaviour {
 
     void BossActive() {
         boss.SetActive(true);
+    }
+
+    void ClearVoice() {
+        AudioSource.PlayClipAtPoint(clearSound, Camera.main.transform.position);
     }
 }

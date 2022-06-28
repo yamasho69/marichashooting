@@ -81,7 +81,7 @@ public class Stage03Manager : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         enemy8.SetActive(true);
 
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(17f);
         enemy9.SetActive(true);
         //1ƒtƒŒ[ƒ€’â~
         yield return null;
