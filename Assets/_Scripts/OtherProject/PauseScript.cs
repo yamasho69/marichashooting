@@ -27,7 +27,7 @@ public class PauseScript : MonoBehaviour{
     }
 
     public void pauseTheGame(){
-        if (IsOnPause) {
+        if (IsOnPause && !Input.GetKeyDown(KeyCode.Space)) { //これがないとボタンをクリックした後にスペースキーでもポーズができてしまう。
             Time.timeScale = 1;
             IsOnPause = false;
             //this.gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
@@ -38,7 +38,7 @@ public class PauseScript : MonoBehaviour{
             joyStick.SetActive(true);
             //jumpButton.SetActive(true);
             //goToTitleButton.SetActive(false);
-        } else {
+        } else if(!Input.GetKeyDown(KeyCode.Space)) {//これがないとボタンをクリックした後にスペースキーでもポーズができてしまう。
             AudioSource.PlayClipAtPoint(pauseOffSE, Camera.main.transform.position);//時間を止めるより先に音を鳴らさないと音が鳴らない
             Time.timeScale = 0;
             IsOnPause = true;

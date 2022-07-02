@@ -51,11 +51,17 @@ public class FireMissile : MonoBehaviour {
             timer -= Time.deltaTime;
         }
 
+        if (Time.timeScale == 0) {
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)) {
+                return;
+            }
+        }
+
+
         // ★改良（長押し連射）
         // 「GetButtonDown」を「GetButton」に変更する（ポイント）
         // 「GetButton」は「押している間」という意味
         if (Input.GetButton("Jump") || buttondown) {
-
             if (Time.timeScale == 1) {//これがないとポーズ中にショットできる
                                       // ★追加（弾切れ発生）
                                       // ここのロジックをよく復習すること（重要ポイント）
@@ -100,7 +106,7 @@ public class FireMissile : MonoBehaviour {
                 }
 
                 powerSlider.value = shotPower;
-            }
+            } 
         }
     }
 
