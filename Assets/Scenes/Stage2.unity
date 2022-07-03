@@ -1365,7 +1365,7 @@ PrefabInstance:
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
       propertyPath: destroyTime
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 811313535508979407, guid: 8c56d9fb5de1b7043bcb9a8f0670dc4e,
         type: 3}
@@ -2042,6 +2042,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteSortPoint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692208954990751838, guid: d0b700ff466ee2b4c83b4184660da883,
+        type: 3}
+      propertyPath: mutekiTime
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4692208954990751839, guid: d0b700ff466ee2b4c83b4184660da883,
         type: 3}

@@ -35,7 +35,7 @@ public class Stage01Manager : MonoBehaviour {
     private void Update() {
         //Debug.Log(Time.frameCount);
 
-        if (enemy9 == null) {
+        if (enemy9 == null && boss!=null &&!isClear) {
             Invoke("BossActive", 3.0f);
         }
 
@@ -82,6 +82,8 @@ public class Stage01Manager : MonoBehaviour {
     }
 
     void BossActive() {
-        boss.SetActive(true);
+        if (!isClear) {
+            boss.SetActive(true);
+        }
     }
 }

@@ -97,6 +97,8 @@ public class Stage03Manager : MonoBehaviour {
     }
 
     void BossActive() {
-        boss.SetActive(true);
+        if (!isClear) {
+            boss.SetActive(true);
+        }
     }
 }

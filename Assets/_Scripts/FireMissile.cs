@@ -115,10 +115,12 @@ public class FireMissile : MonoBehaviour {
         sfxSource.PlayOneShot(clips[randomIndex]);
     }
 
+    //仮想ボタンがクリックされたとき
     public void ButtonDown() {
         buttondown = true;
     }
 
+    //仮想ボタンのクリックが終わったとき
     public void ButtonUp() {
         buttondown = false;
     }

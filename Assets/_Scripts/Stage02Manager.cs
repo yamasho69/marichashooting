@@ -31,7 +31,7 @@ public class Stage02Manager : MonoBehaviour {
     }
 
     private void Update() {
-        if (enemy9 == null && !isClear) {
+        if (enemy9 == null && boss != null && !isClear) {
             Invoke("BossActive", 3.0f);
         }
 
@@ -79,7 +79,9 @@ public class Stage02Manager : MonoBehaviour {
     }
 
     void BossActive() {
-        boss.SetActive(true);
+        if (!isClear) {
+            boss.SetActive(true);
+        }
     }
 
     void ClearVoice() {
