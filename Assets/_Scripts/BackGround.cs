@@ -9,13 +9,10 @@ public class BackGround : MonoBehaviour {
     [SerializeField] float loopPosition;
     public bool yokoScroll = false;//チェックが入ってたら横スクロール
 
-    private void Start() {
-    }
-
     void Update() {
         if (!yokoScroll) {
             //下方向にスクロール
-            transform.position -= new Vector3(0, Time.deltaTime * speed);
+            transform.position -= new Vector3(0,speed);
 
             //Yが-11まで来れば、yPositionまで移動する
             if (transform.position.y <= limitPosition) {
@@ -23,7 +20,7 @@ public class BackGround : MonoBehaviour {
             }
         } else {
             //左方向にスクロール
-            transform.position -= new Vector3(Time.deltaTime * speed,0);
+            transform.position -= new Vector3(speed,0);
 
             //Xが-11まで来れば、xPositionまで移動する
             if (transform.position.x <= limitPosition) {

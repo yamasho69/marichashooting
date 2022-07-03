@@ -2657,7 +2657,7 @@ PrefabInstance:
     - target: {fileID: 5881061642157827609, guid: 31baf4b69cf20634cb2a236d52c778f4,
         type: 3}
       propertyPath: speed
-      value: 0.5
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 5881061642157827609, guid: 31baf4b69cf20634cb2a236d52c778f4,
         type: 3}
@@ -2772,7 +2772,7 @@ PrefabInstance:
     - target: {fileID: 5881061643444193678, guid: 31baf4b69cf20634cb2a236d52c778f4,
         type: 3}
       propertyPath: speed
-      value: 0.5
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 5881061643444193678, guid: 31baf4b69cf20634cb2a236d52c778f4,
         type: 3}
@@ -3959,6 +3959,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 8141960695935299561, guid: 1002fad5e75b1bb4c844d98b861c9e77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8141960695935299563, guid: 1002fad5e75b1bb4c844d98b861c9e77,
         type: 3}
       propertyPath: m_ClearFlags
@@ -4418,7 +4423,7 @@ PrefabInstance:
     - target: {fileID: 5881061642157827609, guid: 31baf4b69cf20634cb2a236d52c778f4,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 5881061642157827609, guid: 31baf4b69cf20634cb2a236d52c778f4,
         type: 3}
@@ -4543,7 +4548,7 @@ PrefabInstance:
     - target: {fileID: 5881061643444193678, guid: 31baf4b69cf20634cb2a236d52c778f4,
         type: 3}
       propertyPath: speed
-      value: 3
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 5881061643444193678, guid: 31baf4b69cf20634cb2a236d52c778f4,
         type: 3}
@@ -7980,7 +7985,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 540, y: 960.00006}
+  m_SizeDelta: {x: 540, y: 960}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7396973541144543501
 MonoBehaviour:

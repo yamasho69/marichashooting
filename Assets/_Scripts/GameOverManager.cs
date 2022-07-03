@@ -13,11 +13,17 @@ public class GameOverManager : MonoBehaviour
     private AudioClip destroySound;
     public GameObject button;
 
+    private void Awake() {
+        if (ScoreManager.score > ScoreManager.highScore) { //ハイスコアを更新していた場合
+            ScoreManager.highScore = ScoreManager.score;
+            ScoreManager.highScoreUpdate = true;
+        }
+    }
+
     void Start()
     {
         destroySound = GetRandom(clips);
         AudioSource.PlayClipAtPoint(destroySound, Camera.main.transform.position);
-
         Invoke("ButtonActive", 1.0f);
     }
 

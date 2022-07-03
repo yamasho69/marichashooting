@@ -928,7 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73842037321108243bfa67f94e3a234f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.002
   limitPosition: -10.24
   loopPosition: 10.24
   yokoScroll: 1
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73842037321108243bfa67f94e3a234f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0.01
   limitPosition: -10
   loopPosition: 10
   yokoScroll: 0
@@ -1143,7 +1143,7 @@ PrefabInstance:
     - target: {fileID: 3186003227367742668, guid: a52ea21f962521c4d97e39442d12cb2c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3186003227367742668, guid: a52ea21f962521c4d97e39442d12cb2c,
         type: 3}
@@ -1650,7 +1650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73842037321108243bfa67f94e3a234f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.002
   limitPosition: -10.24
   loopPosition: 10.24
   yokoScroll: 1
@@ -2242,7 +2242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73842037321108243bfa67f94e3a234f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0.01
   limitPosition: -10
   loopPosition: 10
   yokoScroll: 0

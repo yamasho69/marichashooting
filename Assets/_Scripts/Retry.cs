@@ -5,18 +5,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-//using DG.Tweening;
+using DG.Tweening;
 
 public class Retry: MonoBehaviour {
     [Header("タイトルに戻る")]public bool backTitle;
-
     // ★（追加）
     // 先頭に「public」をつけること（ポイント）
     public void OnRestartButtonClicked() {
-        if (backTitle) {
-            SceneManager.LoadScene("Title");//backTitleがonならTitleへ
-            ScoreManager.nowStage = "Stage1";
-        } else { SceneManager.LoadScene(ScoreManager.nowStage); }//backTitleがoffなら今のステージへ
         // ★追加
         // スコアを０に戻す。
         // 他スクリプトの中にある「静的変数」の操作方法（ポイント）
@@ -26,5 +21,10 @@ public class Retry: MonoBehaviour {
         ScoreManager.noContinue = false;//ノーコンティニュー判定をfalseにする。
         PlayerHealth.zanki = 3;
         Time.timeScale = 1;//ポーズから戻った場合は時間を動かす。
+        DOTween.Clear(true);
+        if (backTitle) {
+            SceneManager.LoadScene("Title");//backTitleがonならTitleへ
+            ScoreManager.nowStage = "Stage1";
+        } else { SceneManager.LoadScene(ScoreManager.nowStage); }//backTitleがoffなら今のステージへ
     }
 }

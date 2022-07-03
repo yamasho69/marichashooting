@@ -619,7 +619,7 @@ PrefabInstance:
     - target: {fileID: 3186003227367742668, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3186003227367742668, guid: 93915cdede2a86741b287c5fe752115c,
         type: 3}
@@ -2067,6 +2067,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5881061642157827609, guid: 31baf4b69cf20634cb2a236d52c778f4,
+        type: 3}
+      propertyPath: speed
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 5881061642647565146, guid: 31baf4b69cf20634cb2a236d52c778f4,
         type: 3}
       propertyPath: m_RootOrder
@@ -2126,6 +2131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BackGrounds
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881061643444193678, guid: 31baf4b69cf20634cb2a236d52c778f4,
+        type: 3}
+      propertyPath: speed
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31baf4b69cf20634cb2a236d52c778f4, type: 3}

@@ -32,16 +32,12 @@ public class Stage02Manager : MonoBehaviour {
 
     private void Update() {
         if (enemy9 == null && boss != null && !isClear) {
-            Invoke("BossActive", 3.0f);
+            BossActive();
         }
 
-
         if (boss==null && !isClear) {
-            
             isClear = true;
-            Invoke("ClearVoice", 1.5f);
-            Invoke("StageClearText", 2.0f);
-            Invoke("StageClear", 5.0f);
+            StartCoroutine("StageClear");
         }
     }
 
@@ -70,21 +66,19 @@ public class Stage02Manager : MonoBehaviour {
         //Ç±Ç±Ç…çƒäJå„ÇÃèàóùÇèëÇ≠
     }
 
-    void StageClear() {
-        SceneManager.LoadScene(nextStageName);
-    }
-
-    void StageClearText() {
-        stageClear.SetActive(true);
-    }
-
     void BossActive() {
         if (!isClear) {
             boss.SetActive(true);
         }
     }
 
-    void ClearVoice() {
+    IEnumerator StageClear() {
+        yield return new WaitForSeconds(1.5f);
         AudioSource.PlayClipAtPoint(clearSound, Camera.main.transform.position);
+        yield return new WaitForSeconds(0.5f);
+        stageClear.SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene(nextStageName);
+        yield return null;
     }
 }

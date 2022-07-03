@@ -16,6 +16,13 @@ public class EndingManager : MonoBehaviour
     public AudioClip hakushumabara;
     public AudioClip daikassai;
     public GameObject button;
+
+    private void Awake() {
+        if (ScoreManager.score > ScoreManager.highScore) { //ハイスコアを更新していた場合
+            ScoreManager.highScore = ScoreManager.score;
+            ScoreManager.highScoreUpdate = true;
+        }
+    }
     void Start()
     {
         if (ScoreManager.noContinue) {

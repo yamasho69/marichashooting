@@ -14,7 +14,7 @@ public class PauseScript : MonoBehaviour{
     public GameObject joyStick;
 
     public void Update() {
-       if (PlayerHealth.zanki > 0 && Input.GetKeyDown(KeyCode.P)) {//GetKeyDown関数にしないと何回も押せてしまう。Pキーでもポーズがかかるように改良         
+       if (PlayerHealth.zanki >= 0 && Input.GetKeyDown(KeyCode.P)) {//GetKeyDown関数にしないと何回も押せてしまう。Pキーでもポーズがかかるように改良         
             pauseTheGame();
         }
     }

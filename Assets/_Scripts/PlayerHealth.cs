@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour {
             Destroy(effect, 1.0f);
             this.gameObject.SetActive(false);
             zanki--;
-            Debug.Log(zanki);
+            //Debug.Log(zanki);
 
             // ★★★（追加）
             // 破壊された回数によって場合分けを行います。
@@ -58,10 +58,6 @@ public class PlayerHealth : MonoBehaviour {
         }
     }
     void GameOver() {
-        if (ScoreManager.score > ScoreManager.highScore) { //ハイスコアを更新していた場合
-            ScoreManager.highScore = ScoreManager.score;
-            ScoreManager.highScoreUpdate = true;
-        }
         SceneManager.LoadScene("GameOver");
     }
     // ★★（追加）

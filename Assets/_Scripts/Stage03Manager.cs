@@ -27,35 +27,24 @@ public class Stage03Manager : MonoBehaviour {
 
     //private float totalTime;
 
-    void Start()
-    {
+    void Start(){
         ScoreManager.nowStage = SceneManager.GetActiveScene().name;//リトライ時に仕様
-
     }
 
     private void Update() {
-        //totalTime += Time.deltaTime;
-        //Debug.Log(totalTime);
-
         if (onmyo == null && !isStart) {
             StartCoroutine("StageStart");
             isStart = true;
         }
 
-        if (enemy9 == null && !isClear) {
-            Invoke("BossActive", 3.0f);
+        if (enemy9 == null && !isClear && boss!=null) {
+            BossActive();
         }
 
-
         if (boss==null && !isClear) {
-            AudioSource.PlayClipAtPoint(clearSound, Camera.main.transform.position);
             isClear = true;
-            if (ScoreManager.score > ScoreManager.highScore) { //ハイスコアを更新していた場合
-                ScoreManager.highScore = ScoreManager.score;
-                ScoreManager.highScoreUpdate = true;
-            }
-            Invoke("StageClearText", 2.0f);
-            Invoke("StageClear", 5.0f);
+            AudioSource.PlayClipAtPoint(clearSound, Camera.main.transform.position);
+            StartCoroutine("StageClear");
         }
     }
 
@@ -64,23 +53,19 @@ public class Stage03Manager : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         enemy1.SetActive(true);
         yield return new WaitForSeconds(16.5f);
-
         enemy2.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         enemy3.SetActive(true);
         yield return new WaitForSeconds(15f);
-
         enemy4.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         enemy5.SetActive(true);
         yield return new WaitForSeconds(19f);
-
         enemy6.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         enemy7.SetActive(true);
         yield return new WaitForSeconds(1f);
         enemy8.SetActive(true);
-
         yield return new WaitForSeconds(17f);
         enemy9.SetActive(true);
         //1フレーム停止
@@ -88,17 +73,15 @@ public class Stage03Manager : MonoBehaviour {
         //ここに再開後の処理を書く
     }
 
-    void StageClear() {
-        SceneManager.LoadScene(nextStageName);
-    }
-
-    void StageClearText() {
+    IEnumerator StageClear() {
+        yield return new WaitForSeconds(2.0f);
         stageClear.SetActive(true);
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene(nextStageName);
+        yield return null;
     }
 
     void BossActive() {
-        if (!isClear) {
             boss.SetActive(true);
         }
-    }
 }

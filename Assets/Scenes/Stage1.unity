@@ -964,9 +964,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73842037321108243bfa67f94e3a234f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.01
   limitPosition: -15.9
-  loopPosition: 32
+  loopPosition: 31.00586
   yokoScroll: 0
 --- !u!212 &885704016
 SpriteRenderer:
@@ -1034,7 +1034,7 @@ PrefabInstance:
     - target: {fileID: 3399581411533632086, guid: e3771813c8d22554daa9d407a54b932d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3399581411533632086, guid: e3771813c8d22554daa9d407a54b932d,
         type: 3}
@@ -1105,7 +1105,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 6547563286110818985, guid: 57388972ce76eb949bfd70bef64148cf,
+      objectReference: {fileID: 6547563286110818985, guid: 21d630852477c24459ad6eac1cbd11c6,
         type: 3}
     - target: {fileID: 3399581411533632089, guid: e3771813c8d22554daa9d407a54b932d,
         type: 3}
@@ -2072,6 +2072,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7396973540768266579, guid: 9c59f0da393d67245b404c0c57cb510e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7396973540768266591, guid: 9c59f0da393d67245b404c0c57cb510e,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2276,7 +2281,7 @@ PrefabInstance:
     - target: {fileID: 7676760882989572233, guid: aa764b87c6208024c94d81ee75202ef3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7676760882989572233, guid: aa764b87c6208024c94d81ee75202ef3,
         type: 3}
@@ -2458,9 +2463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73842037321108243bfa67f94e3a234f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.01
   limitPosition: -15.9
-  loopPosition: 32
+  loopPosition: 31.00586
   yokoScroll: 0
 --- !u!1 &2042711004
 GameObject:
@@ -2533,7 +2538,7 @@ PrefabInstance:
     - target: {fileID: 3399581411533632086, guid: e3771813c8d22554daa9d407a54b932d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 3399581411533632086, guid: e3771813c8d22554daa9d407a54b932d,
         type: 3}
@@ -2605,6 +2610,12 @@ PrefabInstance:
       propertyPath: destroyTime
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3399581411533632089, guid: e3771813c8d22554daa9d407a54b932d,
+        type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 6547563286110818985, guid: 57388972ce76eb949bfd70bef64148cf,
+        type: 3}
     - target: {fileID: 3399581411533632089, guid: e3771813c8d22554daa9d407a54b932d,
         type: 3}
       propertyPath: spawnInterval
